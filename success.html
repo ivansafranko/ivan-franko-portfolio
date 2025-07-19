@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poruka poslana - Apartmani Dada</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .success-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F8F9FA;
+            text-align: center;
+            padding: 2rem;
+        }
+        .success-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        .success-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        .success-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--neutral-charcoal);
+            margin-bottom: 1rem;
+        }
+        .success-message {
+            font-size: 1.1rem;
+            color: var(--neutral-light-text);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .back-button {
+            background: var(--accent-orange);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: #e67e00;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-content">
+            <div class="success-icon">✅</div>
+            <h1 class="success-title">Hvala vam!</h1>
+            <p class="success-message">
+                Vaša poruka je uspješno poslana. Kontaktirat ćemo vas u najkraćem mogućem roku s informacijama o dostupnosti apartmana.
+            </p>
+            <a href="index.html" class="back-button">Povratak na početnu</a>
+        </div>
+    </div>
+</body>
+</html> 

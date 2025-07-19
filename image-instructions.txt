@@ -1,0 +1,23 @@
+IMAGE SETUP INSTRUCTIONS:
+
+1. Save your apartment image as "dada2.jpg" in the "images" folder ✅ DONE
+2. The image will automatically appear as the hero background
+3. The CSS is updated to use: background-image: url('images/dada2.jpg')
+
+Your folder structure should be:
+├── index.html
+├── styles.css  
+├── script.js
+├── design-system.json
+├── README.md
+├── image-instructions.txt
+└── images/
+    └── dada2.jpg  ← Your apartment image
+
+IMPORTANT TIPS:
+- Make sure the file name is exactly "kitchen.jpg" (lowercase)
+- Supported formats: .jpg, .jpeg, .png, .webp
+- If image still doesn't show, try refreshing with Ctrl+F5 (hard refresh)
+- You'll see a navy blue gradient if the image isn't loading properly
+
+The modern white kitchen image will create a beautiful, professional hero section that showcases the quality of your apartments! 

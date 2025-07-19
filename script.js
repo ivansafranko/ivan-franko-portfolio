@@ -1,0 +1,514 @@
+// Apartments Dada - Interactive JavaScript
+
+// Language translations
+const translations = {
+    hr: {
+        // Page meta
+        'page-title': 'Apartmani Dada - Apartmani u Krapinskim Toplicama, Hrvatska',
+        'page-description': 'Moderni apartmani za odmor u Krapinskim Toplicama blizu Aquae Vivae parka. WiFi, parking, potpuno opremljeni smještaji u Hrvatskoj lječilišnoj destinaciji.',
+        
+        // Navigation
+        'nav-home': 'Početna',
+        'nav-about': 'O nama',
+        'nav-apartments': 'Apartmani',
+        'nav-contact': 'Kontakt',
+        
+        // Hero section
+        'hero-headline': 'Apartmani u Krapinskim Toplicama',
+        'hero-subheadline': 'Moderni apartmani za odmor blizu Aquae Vivae vodenog parka. Potpuno opremljeni smještaji s WiFi-em, parkingom i prekrasnim pogledom u vodećoj lječilišnoj destinaciji Hrvatske.',
+        'explore-btn': 'Istražite apartmane',
+        
+        // About section
+        'about-headline': 'Otkrijte Krapinske Toplice',
+        'about-subheadline': 'Mirni lječilišni grad u srcu Hrvatske, savršen za opuštanje i oporavak.',
+        'about-card1-title': 'Mirna lokacija',
+        'about-card1-text': 'Smještene u prekrasnoj hrvatskoj prirodi, Krapinske Toplice nude miran bijeg od gradske vreve sa svojima prirodnim termalnim izvorima i mirnom atmosferom.',
+        'about-card2-title': 'Aquae Vivae vodni park',
+        'about-card2-text': 'Samo nekoliko minuta od naših apartmana, uživajte u renomiranom vodenom parku s termalnim bazenima, wellness sadržajima i zabavnim aktivnostima za cijelu obitelj.',
+        'about-card3-title': 'Moderan komfor',
+        'about-card3-text': 'Naši pažljivo odabrani apartmani kombiniraju tradicionalni hrvatski šarm s modernim sadržajima, osiguravajući da vaš boravak bude udoban i nezaboravan.',
+        
+        // Apartments section
+        'apartments-headline': 'Moderni apartmani',
+        'apartments-subheadline': 'Odaberite iz našeg izbora prekrasno uređenih smještaja',
+        'location1-title': 'Lokacija u centru grada',
+        'location2-title': 'Mirno rezidencijalno područje',
+        
+        // Apartment names
+        'apt1-name': 'Dada Apartman 1 - Deluxe Suite',
+        'apt2-name': 'Dada Apartman 2 - Obiteljski komfor',
+        'apt3-name': 'Dada Apartman 3 - Pogled na vrt',
+        'apt4-name': 'Dada Apartman 4 - Prirodni utočište',
+        
+        // Amenities
+        'amenity-bedroom1': '1 spavaća soba',
+        'amenity-bedrooms2': '2 spavaće sobe',
+        'amenity-bedrooms3': '3 spavaće sobe',
+        'amenity-bathroom1': '1 kupaonica',
+        'amenity-bathrooms2': '2 kupaonice',
+        'amenity-kitchen': 'Kuhinja',
+        'amenity-full-kitchen': 'Potpuna kuhinja',
+        'amenity-kitchenette': 'Kuhinjica',
+        'amenity-wifi': 'WiFi',
+        'amenity-balcony': 'Balkon',
+        'amenity-terrace': 'Terasa',
+        'amenity-garden': 'Vrt',
+        'amenity-bbq': 'BBQ područje',
+        'amenity-patio': 'Privatni patio',
+        'amenity-forest-view': 'Pogled na šumu',
+        'amenity-parking': 'Parking',
+        
+        // Location highlights
+        'location1-highlights-title': 'Prednosti lokacije',
+        'location1-highlights-text': 'Vrhunska lokacija u centru grada, samo 3 minute hoda od Aquae Vivae vodenog parka. Blizu restorana, trgovina i termalnih izvora. Savršeno za istraživanje grada pješice.',
+        'location2-highlights-title': 'Prednosti lokacije',
+        'location2-highlights-text': 'Mirno rezidencijalno četvrt okruženo prirodom. 10 minuta hoda do vodenog parka i centra grada. Idealno za one koji traže mir i tišinu s lakim pristupom sadržajima.',
+        
+        // Testimonials
+        'testimonials-headline': 'Iskustva gostiju',
+        'testimonials-subheadline': 'Što naši gosti kažu o svom boravku',
+        'testimonial1-text': '"Savršena lokacija u blizini vodenog parka. Apartman je bio besprijekorno čist i imao je sve što nam je trebalo. Dada je bila vrlo korisna i odzivna. Toplo preporučujem!"',
+        'testimonial2-text': '"Prekrasna mirna lokacija, upravo ono što smo tražili. Apartman s vrtom bio je divan i miran. Odliča baza za istraživanje regije."',
+        'testimonial3-text': '"Odličan omjer cijene i kvalitete. Čisto, udobno i savršeno smješteno. Termalni izvori su nevjerojatni i tako blizu apartmana."',
+        
+        // Contact section
+        'contact-headline': 'Kontaktirajte nas',
+        'contact-subheadline': 'Spremni za rezervaciju? Tu smo da vam pomognemo da sve bude savršeno.',
+        'contact-email': 'Email',
+        'contact-phone': 'Telefon',
+        'contact-location': 'Lokacija',
+        'contact-location-text': 'Krapinske Toplice, Hrvatska',
+        
+        // Form
+        'form-name': 'Vaše ime',
+        'form-email': 'Vaš email',
+        'form-checkin': 'Datum dolaska',
+        'form-checkout': 'Datum odlaska',
+        'form-message': 'Poruka (preferenca apartmana, posebni zahtjevi...)',
+        'form-submit': 'Pošaljite poruku',
+        
+        // Footer
+        'footer-text': 'Doživite najbolje od Krapinskih Toplica uz naše apartmane.',
+        'footer-copyright': '© 2025 Apartmani Dada. Sva prava pridržana. | apartments-dada.com'
+    },
+    en: {
+        // Page meta
+        'page-title': 'Apartmani Dada - Apartments in Krapinske Toplice, Croatia',
+        'page-description': 'Modern vacation rentals in Krapinske Toplice near Aquae Vivae Water Park. WiFi, parking, fully equipped apartments in Croatia\'s spa destination.',
+        
+        // Navigation
+        'nav-home': 'Homepage',
+        'nav-about': 'About',
+        'nav-apartments': 'Apartments',
+        'nav-contact': 'Contact',
+        
+        // Hero section
+        'hero-headline': 'Apartments in Krapinske Toplice, Croatia',
+        'hero-subheadline': 'Modern vacation rentals near Aquae Vivae Water Park. Fully equipped apartments with WiFi, parking, and stunning views in Croatia\'s premier spa destination.',
+        'explore-btn': 'Explore Apartments',
+        
+        // About section
+        'about-headline': 'Discover Krapinske Toplice',
+        'about-subheadline': 'A peaceful spa town in the heart of Croatia, perfect for relaxation and rejuvenation.',
+        'about-card1-title': 'Tranquil Location',
+        'about-card1-text': 'Nestled in the beautiful Croatian countryside, Krapinske Toplice offers a serene escape from city life with its natural thermal springs and peaceful atmosphere.',
+        'about-card2-title': 'Aquae Vivae Water Park',
+        'about-card2-text': 'Just minutes from our apartments, enjoy the renowned water park featuring thermal pools, wellness facilities, and fun activities for the whole family.',
+        'about-card3-title': 'Modern Comfort',
+        'about-card3-text': 'Our carefully selected apartments combine traditional Croatian charm with modern amenities, ensuring your stay is both comfortable and memorable.',
+        
+        // Apartments section
+        'apartments-headline': 'Modern Apartments',
+        'apartments-subheadline': 'Choose from our selection of beautifully appointed accommodations',
+        'location1-title': 'City Center Location',
+        'location2-title': 'Peaceful Residential Area',
+        
+        // Apartment names
+        'apt1-name': 'Dada Apartment 1 - Deluxe Suite',
+        'apt2-name': 'Dada Apartment 2 - Family Comfort',
+        'apt3-name': 'Dada Apartment 3 - Garden View',
+        'apt4-name': 'Dada Apartment 4 - Nature Retreat',
+        
+        // Amenities
+        'amenity-bedroom1': '1 Bedroom',
+        'amenity-bedrooms2': '2 Bedrooms',
+        'amenity-bedrooms3': '3 Bedrooms',
+        'amenity-bathroom1': '1 Bathroom',
+        'amenity-bathrooms2': '2 Bathrooms',
+        'amenity-kitchen': 'Kitchen',
+        'amenity-full-kitchen': 'Full Kitchen',
+        'amenity-kitchenette': 'Kitchenette',
+        'amenity-wifi': 'WiFi',
+        'amenity-balcony': 'Balcony',
+        'amenity-terrace': 'Terrace',
+        'amenity-garden': 'Garden',
+        'amenity-bbq': 'BBQ Area',
+        'amenity-patio': 'Private Patio',
+        'amenity-forest-view': 'Forest View',
+        'amenity-parking': 'Parking',
+        
+        // Location highlights
+        'location1-highlights-title': 'Location Highlights',
+        'location1-highlights-text': 'Prime city center location just 3 minutes walk from Aquae Vivae Water Park. Close to restaurants, shops, and thermal springs. Perfect for exploring the town on foot.',
+        'location2-highlights-title': 'Location Highlights',
+        'location2-highlights-text': 'Quiet residential neighborhood surrounded by nature. 10 minutes walk to water park and town center. Ideal for those seeking peace and tranquility with easy access to amenities.',
+        
+        // Testimonials
+        'testimonials-headline': 'Guest Experiences',
+        'testimonials-subheadline': 'What our guests say about their stay',
+        'testimonial1-text': '"Perfect location near the water park. The apartment was spotless and had everything we needed. Dada was very helpful and responsive. Highly recommend!"',
+        'testimonial2-text': '"Beautiful quiet location, exactly what we were looking for. The garden apartment was lovely and peaceful. Great base for exploring the region."',
+        'testimonial3-text': '"Excellent value for money. Clean, comfortable, and perfectly located. The thermal springs are amazing and so close to the apartments."',
+        
+        // Contact section
+        'contact-headline': 'Get in Touch',
+        'contact-subheadline': 'Ready to book your stay? We\'re here to help make it perfect.',
+        'contact-email': 'Email',
+        'contact-phone': 'Phone',
+        'contact-location': 'Location',
+        'contact-location-text': 'Krapinske Toplice, Croatia',
+        
+        // Form
+        'form-name': 'Your Name',
+        'form-email': 'Your Email',
+        'form-checkin': 'Check-in Date',
+        'form-checkout': 'Check-out Date',
+        'form-message': 'Message (apartment preference, special requests...)',
+        'form-submit': 'Send Message',
+        
+        // Footer
+        'footer-text': 'Experience the best of Krapinske Toplice with our premium apartment rentals. Your comfort is our priority.',
+        'footer-copyright': '© 2025 Apartmani Dada. All rights reserved. | apartments-dada.com'
+    }
+};
+
+// Language functionality
+let currentLanguage = 'hr';
+let datePickerInstances = []; // Store flatpickr instances
+
+// Function to initialize date pickers only once
+function initializeDatePickers(language) {
+    // Only initialize if we haven't already
+    if (datePickerInstances.length === 0) {
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+        
+        dateInputs.forEach((input, index) => {
+            const config = {
+                altInput: true,
+                allowInput: true
+            };
+            
+            if (language === 'hr') {
+                config.locale = window.flatpickr.l10ns.hr;
+                config.dateFormat = "d.m.Y";
+                config.altFormat = "d.m.Y";
+            } else {
+                config.dateFormat = "d/m/Y";
+                config.altFormat = "d/m/Y";
+            }
+            
+            const instance = flatpickr(input, config);
+            datePickerInstances.push(instance);
+        });
+    }
+}
+
+// Function to change locale of existing date pickers
+function changeDatePickerLocale(language) {
+    datePickerInstances.forEach((instance, index) => {
+        if (instance) {
+            if (language === 'hr') {
+                // Set Croatian locale
+                instance.set('locale', window.flatpickr.l10ns.hr);
+                instance.set('dateFormat', 'd.m.Y');
+                instance.set('altFormat', 'd.m.Y');
+            } else {
+                // Set English locale (default)
+                instance.set('locale', 'default');
+                instance.set('dateFormat', 'd/m/Y');
+                instance.set('altFormat', 'd/m/Y');
+            }
+            
+            // Force redraw
+            instance.redraw();
+        }
+    });
+} // Default to Croatian
+
+function updateLanguage(lang) {
+    currentLanguage = lang;
+    
+    // Update all text elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'TITLE') {
+                element.textContent = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Update placeholder texts
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[data-translate="page-description"]');
+    if (metaDescription && translations[lang]['page-description']) {
+        metaDescription.setAttribute('content', translations[lang]['page-description']);
+    }
+    
+    // Update language toggle button
+    const languageToggle = document.getElementById('languageToggle');
+    const flagIcon = languageToggle.querySelector('.flag-display');
+    const langText = languageToggle.querySelector('.lang-text');
+    
+    if (lang === 'hr') {
+        flagIcon.className = 'fi fi-hr flag-display';
+        langText.textContent = 'HR';
+        document.documentElement.lang = 'hr';
+        document.body.classList.add('croatian-locale');
+        document.body.classList.remove('english-locale');
+    } else {
+        flagIcon.className = 'fi fi-gb flag-display';
+        langText.textContent = 'EN';
+        document.documentElement.lang = 'en';
+        document.body.classList.add('english-locale');
+        document.body.classList.remove('croatian-locale');
+    }
+    
+    // Don't change date picker locale during initial page load - only during manual switches
+    // (The date pickers are initialized with the correct language already)
+    
+    // Reinitialize Lucide icons after DOM changes
+    setTimeout(() => {
+        if (typeof lucide !== 'undefined') {
+            console.log('Refreshing Lucide icons after language change...');
+            lucide.createIcons();
+        }
+    }, 50);
+    
+    // Save preference
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for saved language preference, default to Croatian
+    const savedLanguage = localStorage.getItem('preferredLanguage') || 'hr';
+    
+    // Initialize Lucide icons with debugging
+    setTimeout(() => {
+        if (typeof lucide !== 'undefined') {
+            console.log('Lucide is available, creating icons...');
+            lucide.createIcons();
+            console.log('Lucide icons initialized successfully');
+            
+            // Check if icons were created
+            const icons = document.querySelectorAll('[data-lucide]');
+            console.log('Found', icons.length, 'data-lucide elements');
+        } else {
+            console.error('Lucide is not available!');
+            alert('Lucide icons failed to load!');
+        }
+    }, 100);
+    
+    // First initialize date pickers
+    if (typeof flatpickr !== 'undefined') {
+        initializeDatePickers(savedLanguage);
+    }
+    
+    // Then set language (without trying to change date pickers)
+    updateLanguage(savedLanguage);
+    
+    // Set up language toggle
+    const languageToggle = document.getElementById('languageToggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const newLang = currentLanguage === 'hr' ? 'en' : 'hr';
+            
+            updateLanguage(newLang);
+            
+            // Change locale of existing date pickers
+            if (typeof flatpickr !== 'undefined' && datePickerInstances.length > 0) {
+                changeDatePickerLocale(newLang);
+            }
+            
+            // Force refresh Lucide icons after language change
+            setTimeout(() => {
+                if (typeof lucide !== 'undefined') {
+                    console.log('Refreshing icons after button click...');
+                    lucide.createIcons();
+                    
+                    // Test if icons are working
+                    const iconElements = document.querySelectorAll('[data-lucide]');
+                    iconElements.forEach(el => {
+                        console.log('Icon element:', el.getAttribute('data-lucide'), 'has class:', el.className);
+                    });
+                }
+            }, 100);
+        });
+    }
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerHeight = 80;
+                const targetPosition = target.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Hero explore button functionality
+    const exploreBtn = document.querySelector('.explore-btn');
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', function() {
+            document.getElementById('apartments').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+
+    // Apartment card hover effects
+    const apartmentCards = document.querySelectorAll('.apartment-card');
+    apartmentCards.forEach(card => {
+        const image = card.querySelector('.apartment-image');
+        
+        card.addEventListener('mouseenter', function() {
+            if (image) {
+                image.style.transform = 'scale(1.05)';
+            }
+            card.style.transform = 'translateY(-8px)';
+            card.style.boxShadow = '0 15px 35px rgba(58, 74, 92, 0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            if (image) {
+                image.style.transform = 'scale(1)';
+            }
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = '0 4px 15px rgba(58, 74, 92, 0.1)';
+        });
+    });
+
+    // Testimonial hover effects (CSS-only, no auto-rotation)
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    
+    // Initialize all testimonials to default state
+    testimonialCards.forEach(card => {
+        card.style.transform = 'scale(1)';
+        card.style.opacity = '1';
+        card.style.background = '#ffffff';
+        card.style.borderColor = '#E5E7EB';
+        card.style.transition = 'all 0.3s ease';
+    });
+
+    // Contact form handling with Netlify Forms
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Don't prevent default for Netlify forms
+            // Let the form submit naturally to Netlify
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.contact-submit');
+            const originalText = submitBtn.textContent;
+            const loadingText = currentLanguage === 'hr' ? 'Šalje se...' : 'Sending...';
+            
+            submitBtn.textContent = loadingText;
+            submitBtn.disabled = true;
+            
+            // Simple form validation before submission
+            const inputs = this.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#FF6B6B';
+                } else {
+                    input.style.borderColor = '#E5E7EB';
+                }
+            });
+            
+            if (!isValid) {
+                e.preventDefault();
+                const errorText = currentLanguage === 'hr' ? 
+                    'Molimo unesite sve obavezne podatke.' : 
+                    'Please fill in all required fields.';
+                alert(errorText);
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    let lastScrollTop = 0;
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 100) {
+            header.style.background = 'rgba(58, 74, 92, 0.98)';
+            header.style.backdropFilter = 'blur(25px)';
+        } else {
+            header.style.background = 'rgba(58, 74, 92, 0.95)';
+            header.style.backdropFilter = 'blur(20px)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    // Add loading animation for images
+    const apartmentImages = document.querySelectorAll('.apartment-image');
+    apartmentImages.forEach(image => {
+        image.style.opacity = '0';
+        image.style.transition = 'opacity 0.5s ease';
+        
+        setTimeout(() => {
+            image.style.opacity = '1';
+        }, 100);
+    });
+
+    // Back to top functionality
+    const backToTopButton = document.getElementById('backToTop');
+    if (backToTopButton) {
+        // Click handler
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll handler to show/hide button
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+    }
+}); 

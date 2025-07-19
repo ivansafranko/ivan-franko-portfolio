@@ -1,0 +1,400 @@
+{
+  "designSystem": {
+    "name": "Property Rental Platform Design System",
+    "version": "1.0.0",
+    "description": "Modern, clean design system for property rental and travel accommodation platforms",
+    
+    "colorPalette": {
+      "primary": {
+        "navy": "#3A4A5C",
+        "darkBlue": "#2C3E50",
+        "mediumBlue": "#34495E"
+      },
+      "secondary": {
+        "lightGray": "#F8F9FA",
+        "mediumGray": "#E9ECEF",
+        "darkGray": "#6C757D"
+      },
+      "accent": {
+        "orange": "#FF8C00",
+        "amber": "#FFC107",
+        "gold": "#FFD700"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "offWhite": "#FAFAFA",
+        "charcoal": "#2D3436",
+        "lightText": "#74788D"
+      }
+    },
+    
+    "typography": {
+      "fontFamily": {
+        "primary": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "secondary": "Poppins, sans-serif"
+      },
+      "fontSizes": {
+        "xs": "0.75rem",
+        "sm": "0.875rem", 
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem"
+      },
+      "fontWeights": {
+        "light": 300,
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "lineHeights": {
+        "tight": 1.25,
+        "normal": 1.5,
+        "relaxed": 1.75
+      }
+    },
+    
+    "spacing": {
+      "xs": "0.5rem",
+      "sm": "1rem", 
+      "md": "1.5rem",
+      "lg": "2rem",
+      "xl": "3rem",
+      "2xl": "4rem",
+      "3xl": "6rem"
+    },
+    
+    "borderRadius": {
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "lg": "0.75rem",
+      "xl": "1rem",
+      "2xl": "1.5rem"
+    },
+    
+    "shadows": {
+      "sm": "0 1px 3px rgba(0, 0, 0, 0.1)",
+      "md": "0 4px 6px rgba(0, 0, 0, 0.1)",
+      "lg": "0 10px 15px rgba(0, 0, 0, 0.1)",
+      "card": "0 2px 8px rgba(0, 0, 0, 0.08)"
+    },
+    
+    "layout": {
+      "structure": {
+        "type": "asymmetric-two-column",
+        "mainContent": {
+          "width": "65%",
+          "position": "left"
+        },
+        "sidebar": {
+          "width": "35%", 
+          "position": "right",
+          "background": "offWhite"
+        }
+      },
+      "grid": {
+        "columns": 12,
+        "gutter": "1.5rem",
+        "maxWidth": "1200px"
+      },
+      "breakpoints": {
+        "sm": "640px",
+        "md": "768px", 
+        "lg": "1024px",
+        "xl": "1280px"
+      }
+    },
+    
+    "components": {
+      "header": {
+        "height": "70px",
+        "background": "white",
+        "borderBottom": "1px solid #E9ECEF",
+        "padding": "0 2rem",
+        "layout": "flex-between",
+        "elements": {
+          "logo": {
+            "fontSize": "1.5rem",
+            "fontWeight": "bold",
+            "color": "charcoal"
+          },
+          "navigation": {
+            "gap": "2rem",
+            "fontSize": "0.9rem",
+            "fontWeight": "medium",
+            "color": "darkGray"
+          },
+          "cta": {
+            "background": "navy",
+            "color": "white",
+            "padding": "0.5rem 1.5rem",
+            "borderRadius": "md"
+          }
+        }
+      },
+      
+      "heroSection": {
+        "layout": "split-content-image",
+        "background": "lightGray",
+        "padding": "4rem 2rem",
+        "elements": {
+          "headline": {
+            "fontSize": "3xl",
+            "fontWeight": "bold",
+            "color": "charcoal",
+            "lineHeight": "tight",
+            "marginBottom": "1rem"
+          },
+          "subheadline": {
+            "fontSize": "lg", 
+            "color": "lightText",
+            "lineHeight": "relaxed",
+            "marginBottom": "2rem"
+          },
+          "searchForm": {
+            "background": "white",
+            "padding": "1.5rem",
+            "borderRadius": "lg",
+            "shadow": "card",
+            "layout": "inline-flex",
+            "gap": "1rem"
+          }
+        }
+      },
+      
+      "propertyCard": {
+        "background": "white",
+        "borderRadius": "lg",
+        "overflow": "hidden",
+        "shadow": "card",
+        "marginBottom": "1rem",
+        "elements": {
+          "image": {
+            "aspectRatio": "16:10",
+            "borderRadius": "lg lg 0 0"
+          },
+          "content": {
+            "padding": "1rem"
+          },
+          "title": {
+            "fontSize": "sm",
+            "fontWeight": "medium",
+            "color": "charcoal",
+            "marginBottom": "0.5rem"
+          },
+          "location": {
+            "fontSize": "xs",
+            "color": "lightText"
+          },
+          "rating": {
+            "display": "flex-center",
+            "gap": "0.25rem",
+            "fontSize": "xs",
+            "color": "orange"
+          }
+        }
+      },
+      
+      "experienceCard": {
+        "position": "relative",
+        "borderRadius": "lg",
+        "overflow": "hidden",
+        "aspectRatio": "4:3",
+        "elements": {
+          "overlay": {
+            "background": "linear-gradient(to bottom, transparent, rgba(0,0,0,0.7))",
+            "position": "absolute",
+            "bottom": 0,
+            "width": "100%",
+            "padding": "1rem"
+          },
+          "title": {
+            "color": "white",
+            "fontSize": "sm",
+            "fontWeight": "medium"
+          },
+          "subtitle": {
+            "color": "rgba(255,255,255,0.8)",
+            "fontSize": "xs"
+          }
+        }
+      },
+      
+      "testimonialCard": {
+        "background": "white",
+        "padding": "1.5rem",
+        "borderRadius": "lg",
+        "shadow": "sm",
+        "border": "1px solid #E9ECEF",
+        "elements": {
+          "avatar": {
+            "width": "48px",
+            "height": "48px", 
+            "borderRadius": "50%",
+            "marginBottom": "1rem"
+          },
+          "name": {
+            "fontSize": "sm",
+            "fontWeight": "semibold",
+            "color": "charcoal"
+          },
+          "text": {
+            "fontSize": "sm",
+            "color": "lightText",
+            "lineHeight": "relaxed"
+          }
+        }
+      },
+      
+      "featureSection": {
+        "background": "white",
+        "padding": "4rem 2rem",
+        "textAlign": "center",
+        "elements": {
+          "headline": {
+            "fontSize": "2xl",
+            "fontWeight": "semibold",
+            "color": "charcoal",
+            "marginBottom": "0.5rem"
+          },
+          "subheadline": {
+            "fontSize": "lg",
+            "color": "lightText",
+            "marginBottom": "3rem"
+          },
+          "grid": {
+            "columns": 3,
+            "gap": "2rem"
+          },
+          "featureItem": {
+            "textAlign": "center",
+            "elements": {
+              "icon": {
+                "width": "64px",
+                "height": "64px",
+                "marginBottom": "1rem",
+                "color": "navy"
+              },
+              "title": {
+                "fontSize": "lg",
+                "fontWeight": "semibold",
+                "color": "charcoal",
+                "marginBottom": "0.5rem"
+              },
+              "description": {
+                "fontSize": "sm",
+                "color": "lightText",
+                "lineHeight": "relaxed"
+              }
+            }
+          }
+        }
+      },
+      
+      "footer": {
+        "background": "navy",
+        "color": "white",
+        "padding": "3rem 2rem 2rem",
+        "elements": {
+          "logo": {
+            "fontSize": "xl",
+            "fontWeight": "bold",
+            "marginBottom": "1rem"
+          },
+          "tagline": {
+            "fontSize": "sm",
+            "color": "rgba(255,255,255,0.7)",
+            "marginBottom": "2rem"
+          },
+          "socialLinks": {
+            "display": "flex",
+            "gap": "1rem",
+            "fontSize": "lg"
+          }
+        }
+      }
+    },
+    
+    "patterns": {
+      "cardGrid": {
+        "display": "grid",
+        "gap": "1rem",
+        "gridTemplateColumns": "repeat(auto-fit, minmax(280px, 1fr))"
+      },
+      "sectionSpacing": {
+        "marginBottom": "4rem"
+      },
+      "buttonPrimary": {
+        "background": "navy",
+        "color": "white",
+        "padding": "0.75rem 1.5rem",
+        "borderRadius": "md",
+        "fontSize": "sm",
+        "fontWeight": "medium",
+        "border": "none",
+        "cursor": "pointer",
+        "transition": "all 0.2s ease"
+      },
+      "inputField": {
+        "padding": "0.75rem 1rem",
+        "border": "1px solid #E9ECEF",
+        "borderRadius": "md",
+        "fontSize": "sm",
+        "background": "white"
+      }
+    },
+    
+    "designPrinciples": {
+      "hierarchy": "Clear visual hierarchy with prominent headlines and supporting text",
+      "whitespace": "Generous use of whitespace for breathing room and focus",
+      "consistency": "Consistent spacing, typography, and component styling throughout",
+      "accessibility": "High contrast ratios and readable font sizes",
+      "modernism": "Clean, minimal aesthetic with subtle shadows and rounded corners",
+      "trust": "Professional appearance that builds confidence in the platform"
+    },
+    
+    "contentStructure": {
+      "sections": [
+        {
+          "name": "Header Navigation",
+          "purpose": "Primary navigation and brand identity",
+          "layout": "horizontal-flex"
+        },
+        {
+          "name": "Hero Section", 
+          "purpose": "Primary value proposition and search functionality",
+          "layout": "split-content-image"
+        },
+        {
+          "name": "Property Listings",
+          "purpose": "Featured properties with ratings and details",
+          "layout": "vertical-card-stack"
+        },
+        {
+          "name": "Experience Discovery",
+          "purpose": "Additional services and experiences",
+          "layout": "grid-overlay-cards"
+        },
+        {
+          "name": "Social Proof",
+          "purpose": "Customer testimonials and reviews",
+          "layout": "horizontal-testimonial-cards"
+        },
+        {
+          "name": "Process Steps",
+          "purpose": "How the service works",
+          "layout": "three-column-features"
+        },
+        {
+          "name": "Footer",
+          "purpose": "Brand reinforcement and additional links",
+          "layout": "centered-dark"
+        }
+      ]
+    }
+  }
+} 
