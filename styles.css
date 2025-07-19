@@ -864,6 +864,7 @@ input[type="date"][lang="en-GB"] {
     display: flex;
     gap: var(--spacing-sm);
     justify-content: flex-end;
+    margin-right: 4rem;
 }
 
 .social-links a {
