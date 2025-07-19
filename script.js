@@ -35,15 +35,16 @@ const translations = {
         'location2-title': 'Mirno rezidencijalno područje',
         
         // Apartment names
-        'apt1-name': 'Dada Apartman 1 - Deluxe Suite',
-        'apt2-name': 'Dada Apartman 2 - Obiteljski komfor',
-        'apt3-name': 'Dada Apartman 3 - Pogled na vrt',
-        'apt4-name': 'Dada Apartman 4 - Prirodni utočište',
+        'apt1-name': 'Dada Apartman 1 (45m²)',
+        'apt2-name': 'Dada Apartman 2 (70m²)',
+        'apt3-name': 'Studio Apartman Šafranko (25m²)',
+        'apt4-name': 'Soba Šafranko (17m²)',
         
         // Amenities
         'amenity-bedroom1': '1 spavaća soba',
         'amenity-bedrooms2': '2 spavaće sobe',
         'amenity-bedrooms3': '3 spavaće sobe',
+        'amenity-studio': 'Studio',
         'amenity-bathroom1': '1 kupaonica',
         'amenity-bathrooms2': '2 kupaonice',
         'amenity-kitchen': 'Kuhinja',
@@ -56,6 +57,11 @@ const translations = {
         'amenity-bbq': 'BBQ područje',
         'amenity-patio': 'Privatni patio',
         'amenity-forest-view': 'Pogled na šumu',
+        'amenity-air-conditioning': 'Klima uređaj',
+        'amenity-room': 'Soba',
+        'amenity-tv': 'TV',
+        'amenity-wardrobe': 'Ormar',
+        'amenity-skylight': 'Krovni prozor',
         'amenity-parking': 'Parking',
         
         // Location highlights
@@ -86,6 +92,8 @@ const translations = {
         'form-checkout': 'Datum odlaska',
         'form-message': 'Poruka (preferenca apartmana, posebni zahtjevi...)',
         'form-submit': 'Pošaljite poruku',
+        'form-success-title': 'Poruka uspješno poslana!',
+        'form-success-text': 'Hvala vam na upitu. Javit ćemo vam se u roku od 24 sata.',
         
         // Footer
         'footer-text': 'Doživite najbolje od Krapinskih Toplica uz naše apartmane.',
@@ -93,7 +101,7 @@ const translations = {
     },
     en: {
         // Page meta
-        'page-title': 'Apartmani Dada - Apartments in Krapinske Toplice, Croatia',
+        'page-title': 'Apartmani Dada - Apartments in Krapinske Toplice',
         'page-description': 'Modern vacation rentals in Krapinske Toplice near Aquae Vivae Water Park. WiFi, parking, fully equipped apartments in Croatia\'s spa destination.',
         
         // Navigation
@@ -103,7 +111,7 @@ const translations = {
         'nav-contact': 'Contact',
         
         // Hero section
-        'hero-headline': 'Apartments in Krapinske Toplice, Croatia',
+        'hero-headline': 'Apartments in Krapinske Toplice',
         'hero-subheadline': 'Modern vacation rentals near Aquae Vivae Water Park. Fully equipped apartments with WiFi, parking, and stunning views in Croatia\'s premier spa destination.',
         'explore-btn': 'Explore Apartments',
         
@@ -124,15 +132,16 @@ const translations = {
         'location2-title': 'Peaceful Residential Area',
         
         // Apartment names
-        'apt1-name': 'Dada Apartment 1 - Deluxe Suite',
-        'apt2-name': 'Dada Apartment 2 - Family Comfort',
-        'apt3-name': 'Dada Apartment 3 - Garden View',
-        'apt4-name': 'Dada Apartment 4 - Nature Retreat',
+        'apt1-name': 'Dada Apartment 1 (45m²)',
+        'apt2-name': 'Dada Apartment 2 (70m²)',
+        'apt3-name': 'Studio Apartment Šafranko (25m²)',
+        'apt4-name': 'Soba Šafranko (17m²)',
         
         // Amenities
         'amenity-bedroom1': '1 Bedroom',
         'amenity-bedrooms2': '2 Bedrooms',
         'amenity-bedrooms3': '3 Bedrooms',
+        'amenity-studio': 'Studio',
         'amenity-bathroom1': '1 Bathroom',
         'amenity-bathrooms2': '2 Bathrooms',
         'amenity-kitchen': 'Kitchen',
@@ -145,6 +154,11 @@ const translations = {
         'amenity-bbq': 'BBQ Area',
         'amenity-patio': 'Private Patio',
         'amenity-forest-view': 'Forest View',
+        'amenity-air-conditioning': 'Air Conditioning',
+        'amenity-room': 'Room',
+        'amenity-tv': 'TV',
+        'amenity-wardrobe': 'Wardrobe',
+        'amenity-skylight': 'Skylight',
         'amenity-parking': 'Parking',
         
         // Location highlights
@@ -175,6 +189,8 @@ const translations = {
         'form-checkout': 'Check-out Date',
         'form-message': 'Message (apartment preference, special requests...)',
         'form-submit': 'Send Message',
+        'form-success-title': 'Message Sent Successfully!',
+        'form-success-text': 'Thank you for your inquiry. We\'ll get back to you within 24 hours.',
         
         // Footer
         'footer-text': 'Experience the best of Krapinske Toplice with our premium apartment rentals. Your comfort is our priority.',
@@ -384,26 +400,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Apartment card hover effects
-    const apartmentCards = document.querySelectorAll('.apartment-card');
-    apartmentCards.forEach(card => {
-        const image = card.querySelector('.apartment-image');
-        
-        card.addEventListener('mouseenter', function() {
-            if (image) {
-                image.style.transform = 'scale(1.05)';
-            }
-            card.style.transform = 'translateY(-8px)';
-            card.style.boxShadow = '0 15px 35px rgba(58, 74, 92, 0.15)';
+        // Image gallery functionality for apartments
+    const apartmentGalleries = document.querySelectorAll('.apartment-gallery');
+    apartmentGalleries.forEach(gallery => {
+        const images = gallery.querySelectorAll('.gallery-image');
+        const prevBtn = gallery.querySelector('.gallery-prev');
+        const nextBtn = gallery.querySelector('.gallery-next');
+        const indicators = gallery.querySelectorAll('.gallery-indicator');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
+            });
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            });
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                showImage(currentIndex);
+            });
         });
-        
-        card.addEventListener('mouseleave', function() {
-            if (image) {
-                image.style.transform = 'scale(1)';
-            }
-            card.style.transform = 'translateY(0)';
-            card.style.boxShadow = '0 4px 15px rgba(58, 74, 92, 0.1)';
-        });
+
+        // Show first image initially
+        showImage(0);
     });
 
     // Testimonial hover effects (CSS-only, no auto-rotation)
@@ -422,8 +459,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Don't prevent default for Netlify forms
-            // Let the form submit naturally to Netlify
+            e.preventDefault(); // Prevent default form submission
             
             // Show loading state
             const submitBtn = this.querySelector('.contact-submit');
@@ -447,7 +483,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (!isValid) {
-                e.preventDefault();
                 const errorText = currentLanguage === 'hr' ? 
                     'Molimo unesite sve obavezne podatke.' : 
                     'Please fill in all required fields.';
@@ -456,7 +491,57 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset button
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
+                return;
             }
+            
+            // Submit form data to Netlify
+            const formData = new FormData(this);
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                // Show success message
+                const successMessage = document.getElementById('form-success-message');
+                const contactFormElement = document.querySelector('.contact-form');
+                
+                // Hide form and show success message
+                contactFormElement.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Update Lucide icons for the success message
+                lucide.createIcons();
+                
+                // Apply current language translations to success message
+                updateLanguage(currentLanguage);
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset form for future use
+                contactFormElement.reset();
+                
+                // Show form again after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    contactFormElement.style.display = 'block';
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 5000);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                const errorText = currentLanguage === 'hr' ? 
+                    'Greška pri slanju poruke. Molimo pokušajte ponovo.' : 
+                    'Error sending message. Please try again.';
+                alert(errorText);
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 

@@ -1,0 +1,33 @@
+📸 SOBA ŠAFRANKO IMAGES - SAVE GUIDE
+=====================================
+
+Save your 4 room photos with these EXACT names by replacing the placeholder files:
+
+📁 Folder: images/apartments/apartment-4/
+
+1. Bedroom (Twin Beds, Skylight) → soba-safranko-bedroom-001.webp ⭐ FIRST IMAGE
+2. Living Area (TV, Table, Wardrobe) → soba-safranko-living-area-001.webp
+3. Bathroom Entrance (Hallway, Sink) → soba-safranko-bathroom-entrance-001.webp
+4. Full Bathroom (Shower, Toilet, Tiles) → soba-safranko-bathroom-001.webp
+
+HOW TO SAVE:
+1. Right-click each photo from our conversation
+2. "Save image as..."
+3. Navigate to: C:\Users\ivans\OneDrive\Desktop\dada_apartments1\images\apartments\apartment-4\
+4. Replace the placeholder file with the same name
+5. The bedroom photo will show first in the gallery!
+
+✅ GALLERY FEATURES:
+- 4 photos total
+- Navigation arrows (< >)
+- Dot indicators (click to jump)
+- Bedroom shows first (cozy sleeping area!)
+- Mobile responsive
+
+✅ ROOM DETAILS UPDATED:
+- Name: "Soba Šafranko (17m²)" - compact and cozy room!
+- Size: 17m² (efficient room with bathroom!)  
+- Amenities: Room, 1 Bathroom, TV, WiFi, Wardrobe, Skylight
+- Perfect for solo travelers or couples wanting budget accommodation!
+- Beautiful skylight in bedroom adds natural light!
+- Modern bathroom with patterned tiles! 

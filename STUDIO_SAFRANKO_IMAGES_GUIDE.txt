@@ -1,0 +1,32 @@
+📸 STUDIO APARTMAN ŠAFRANKO IMAGES - SAVE GUIDE
+===============================================
+
+Save your 5 studio apartment photos with these EXACT names by replacing the placeholder files:
+
+📁 Folder: images/apartments/apartment-3/
+
+1. Bedroom (Twin Beds) → studio-safranko-bedroom-001.webp ⭐ FIRST IMAGE
+2. Living Room (Sofa Bed) → studio-safranko-living-room-001.webp
+3. Bathroom (Patterned Tiles) → studio-safranko-bathroom-001.webp
+4. Kitchen/Dining Area → studio-safranko-kitchen-001.webp
+5. Balcony (Outdoor Seating) → studio-safranko-balcony-001.webp
+
+HOW TO SAVE:
+1. Right-click each photo from our conversation
+2. "Save image as..."
+3. Navigate to: C:\Users\ivans\OneDrive\Desktop\dada_apartments1\images\apartments\apartment-3\
+4. Replace the placeholder file with the same name
+5. The bedroom photo will show first in the gallery!
+
+✅ GALLERY FEATURES:
+- 5 photos total
+- Navigation arrows (< >)
+- Dot indicators (click to jump)
+- Bedroom shows first (cozy sleeping area!)
+- Mobile responsive
+
+✅ APARTMENT DETAILS UPDATED:
+- Name: "Studio Apartman Šafranko (25m²)" - perfect compact studio!
+- Size: 25m² (efficient studio apartment!)  
+- Amenities: Studio, 1 Bathroom, Kitchenette, WiFi, Balcony, Air Conditioning
+- Great for couples or solo travelers looking for modern comfort! 

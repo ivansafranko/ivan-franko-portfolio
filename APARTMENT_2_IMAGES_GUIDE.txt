@@ -1,0 +1,32 @@
+📸 APARTMENT 2 IMAGES - SAVE GUIDE
+===============================
+
+Save your 5 apartment photos with these EXACT names by replacing the placeholder files:
+
+📁 Folder: images/apartments/apartment-2/
+
+1. Living/Dining Area → dada-apartment-2-living-room-001.webp ⭐ FIRST IMAGE
+2. Bunk Bed Room photo → dada-apartment-2-bunk-beds-001.webp
+3. Balcony with Nature View → dada-apartment-2-balcony-001.webp  
+4. Bathroom (Blue Tiles) → dada-apartment-2-bathroom-001.webp
+5. Main Bedroom (Double Bed) → dada-apartment-2-bedroom-001.webp
+
+HOW TO SAVE:
+1. Right-click each photo from our conversation
+2. "Save image as..."
+3. Navigate to: C:\Users\ivans\OneDrive\Desktop\dada_apartments1\images\apartments\apartment-2\
+4. Replace the placeholder file with the same name
+5. The living room photo will show first in the gallery!
+
+✅ GALLERY FEATURES:
+- 5 photos total
+- Navigation arrows (< >)
+- Dot indicators (click to jump)
+- Living room shows first (welcoming first impression!)
+- Mobile responsive
+
+✅ APARTMENT DETAILS UPDATED:
+- Title: "Dada Apartment 2 (70m²)" - clean and simple!
+- Size: 70m² (spacious apartment!)  
+- Rooms: 2 Bedrooms (bunk bed room + main bedroom), 1 Bathroom
+- Living room first creates welcoming impression for guests! 

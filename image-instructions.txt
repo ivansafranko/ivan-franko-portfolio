@@ -1,8 +1,8 @@
 IMAGE SETUP INSTRUCTIONS:
 
-1. Save your apartment image as "dada2.jpg" in the "images" folder ✅ DONE
+1. Save your apartment image as "dada-apartments-krapinske-toplice-hero.webp" in the "images" folder ✅ DONE
 2. The image will automatically appear as the hero background
-3. The CSS is updated to use: background-image: url('images/dada2.jpg')
+3. The CSS is updated to use: background-image: url('images/dada-apartments-krapinske-toplice-hero.webp')
 
 Your folder structure should be:
 ├── index.html
@@ -12,7 +12,7 @@ Your folder structure should be:
 ├── README.md
 ├── image-instructions.txt
 └── images/
-    └── dada2.jpg  ← Your apartment image
+    └── dada-apartments-krapinske-toplice-hero.webp  ← Your apartment image
 
 IMPORTANT TIPS:
 - Make sure the file name is exactly "kitchen.jpg" (lowercase)
