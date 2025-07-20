@@ -1213,6 +1213,94 @@ input[type="date"][lang="en-GB"] {
         padding: 0 var(--spacing-sm);
     }
     
+    /* Mobile navigation */
+    .nav-desktop {
+        display: none;
+    }
+    
+    .nav-mobile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .mobile-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(58, 74, 92, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .mobile-nav-link {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: color 0.3s ease;
+    }
+    
+    .mobile-nav-link:hover {
+        color: var(--accent-orange);
+    }
+    
+    .mobile-nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .hamburger-menu {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 0.75rem;
+        margin-right: 0.5rem;
+        position: relative;
+        z-index: 1001;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hamburger-line {
+        width: 24px;
+        height: 3px;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
     .header {
         height: 70px;
     }
@@ -1312,6 +1400,34 @@ input[type="date"][lang="en-GB"] {
     
     .contact-content {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .contact-form,
+    .location-info {
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Fix phone link styling - ensure it's white */
+    .location-info a,
+    .location-info a[href^="tel"],
+    .location-info a[href^="mailto"],
+    .location-info a:link,
+    .location-info a:visited,
+    .location-info a:active {
+        color: #FFFFFF !important;
+        text-decoration: none !important;
+    }
+    
+    .location-info a:hover,
+    .location-info a[href^="tel"]:hover,
+    .location-info a[href^="mailto"]:hover {
+        text-decoration: underline !important;
+        color: #FFFFFF !important;
     }
     
     .form-group {
