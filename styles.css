@@ -116,6 +116,22 @@ body {
     gap: 1.5rem;
 }
 
+/* Desktop navigation */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Mobile navigation - hidden by default */
+.nav-mobile {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
 .nav-link {
     color: #ffffff;
     text-decoration: none;
@@ -1221,10 +1237,11 @@ input[type="date"][lang="en-GB"] {
     .nav-mobile {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
     }
     
     .mobile-menu {
+        display: block;
         position: fixed;
         top: 70px;
         left: 0;
@@ -1238,6 +1255,7 @@ input[type="date"][lang="en-GB"] {
         transition: all 0.3s ease;
         z-index: 999;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
     
     .mobile-menu.active {
@@ -1271,14 +1289,19 @@ input[type="date"][lang="en-GB"] {
         display: flex;
         flex-direction: column;
         gap: 3px;
-        padding: 0.75rem;
-        margin-right: 0.5rem;
+        padding: 0.5rem;
         position: relative;
         z-index: 1001;
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
         justify-content: center;
         align-items: center;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger-menu:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
     
     .hamburger-line {
@@ -1335,17 +1358,17 @@ input[type="date"][lang="en-GB"] {
     }
     
     .navigation {
-        gap: var(--spacing-sm);
+        gap: 0.5rem;
     }
     
     .nav-link {
-        font-size: var(--font-sm);
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
     }
     
     .nav-cta {
-        padding: var(--spacing-xs) var(--spacing-sm);
-        margin-left: var(--spacing-xs);
-        font-size: var(--font-sm);
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
     }
     
     .apartments-grid {
@@ -1401,11 +1424,15 @@ input[type="date"][lang="en-GB"] {
     
     .contact-content {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
+        padding: 0;
         gap: 2rem;
     }
     
     .contact-form,
+    .contact-info {
+        padding: 1.5rem;
+    }
+    
     .location-info {
         padding: 1.5rem;
         margin: 0;
@@ -1497,11 +1524,15 @@ input[type="date"][lang="en-GB"] {
     }
     
     .contact-content {
-        padding: 0 0.5rem;
+        padding: 0;
         gap: 1.5rem;
     }
     
     .contact-form,
+    .contact-info {
+        padding: 1rem;
+    }
+    
     .location-info {
         padding: 1rem;
     }
@@ -1526,6 +1557,21 @@ input[type="date"][lang="en-GB"] {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+    }
+    
+    .nav-mobile {
+        gap: 0.25rem;
+    }
+    
+    .hamburger-menu {
+        width: 36px;
+        height: 36px;
+        padding: 0.4rem;
+    }
+    
+    .hamburger-line {
+        width: 20px;
+        height: 2px;
     }
 }
 
