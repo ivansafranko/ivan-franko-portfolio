@@ -32,7 +32,7 @@ const translations = {
         'apartments-headline': 'Moderni apartmani',
         'apartments-subheadline': 'Odaberite iz našeg izbora prekrasno uređenih smještaja',
         'location1-title': 'Lokacija u centru grada',
-        'location2-title': 'Mirno rezidencijalno područje',
+        'location2-title': 'Centar grada - Blizu bolnice',
         
         // Apartment names
         'apt1-name': 'Dada Apartman 1 (45m²)',
@@ -68,7 +68,7 @@ const translations = {
         'location1-highlights-title': 'Prednosti lokacije',
         'location1-highlights-text': 'Vrhunska lokacija u centru grada, samo 3 minute hoda od Aquae Vivae vodenog parka. Blizu restorana, trgovina i termalnih izvora. Savršeno za istraživanje grada pješice.',
         'location2-highlights-title': 'Prednosti lokacije',
-        'location2-highlights-text': 'Mirno rezidencijalno četvrt okruženo prirodom. 10 minuta hoda do vodenog parka i centra grada. Idealno za one koji traže mir i tišinu s lakim pristupom sadržajima.',
+        'location2-highlights-text': 'Smješteno u centru grada vrlo blizu bolnice za medicinsku rehabilitaciju. 5 minuta hoda do vodenog parka Aquae Vivae. Izvrsna lokacija za pacijente bolnice i posjetitelje.',
         
         // Testimonials
         'testimonials-headline': 'Iskustva gostiju',
@@ -94,6 +94,9 @@ const translations = {
         'form-submit': 'Pošaljite poruku',
         'form-success-title': 'Poruka uspješno poslana!',
         'form-success-text': 'Hvala vam na upitu. Javit ćemo vam se u roku od 24 sata.',
+        'booking-btn': 'Rezerviraj na Booking.com',
+        'booking-btn-short': 'Booking.com',
+        'booking-rating': 'Booking.com',
         
         // Footer
         'footer-text': 'Doživite najbolje od Krapinskih Toplica uz naše apartmane.',
@@ -129,7 +132,7 @@ const translations = {
         'apartments-headline': 'Modern Apartments',
         'apartments-subheadline': 'Choose from our selection of beautifully appointed accommodations',
         'location1-title': 'City Center Location',
-        'location2-title': 'Peaceful Residential Area',
+        'location2-title': 'City Center - Near Hospital',
         
         // Apartment names
         'apt1-name': 'Dada Apartment 1 (45m²)',
@@ -165,7 +168,7 @@ const translations = {
         'location1-highlights-title': 'Location Highlights',
         'location1-highlights-text': 'Prime city center location just 3 minutes walk from Aquae Vivae Water Park. Close to restaurants, shops, and thermal springs. Perfect for exploring the town on foot.',
         'location2-highlights-title': 'Location Highlights',
-        'location2-highlights-text': 'Quiet residential neighborhood surrounded by nature. 10 minutes walk to water park and town center. Ideal for those seeking peace and tranquility with easy access to amenities.',
+        'location2-highlights-text': 'Located in city center very close to medical rehabilitation hospital. 5 minutes walk to Aquae Vivae Water Park. Excellent location for hospital patients and visitors.',
         
         // Testimonials
         'testimonials-headline': 'Guest Experiences',
@@ -191,6 +194,9 @@ const translations = {
         'form-submit': 'Send Message',
         'form-success-title': 'Message Sent Successfully!',
         'form-success-text': 'Thank you for your inquiry. We\'ll get back to you within 24 hours.',
+        'booking-btn': 'Book on Booking.com',
+        'booking-btn-short': 'Booking.com',
+        'booking-rating': 'Booking.com',
         
         // Footer
         'footer-text': 'Experience the best of Krapinske Toplice with our premium apartment rentals. Your comfort is our priority.',
@@ -379,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const headerHeight = 80;
+                const headerHeight = 20;
                 const targetPosition = target.offsetTop - headerHeight;
                 window.scrollTo({
                     top: targetPosition,
@@ -393,10 +399,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const exploreBtn = document.querySelector('.explore-btn');
     if (exploreBtn) {
         exploreBtn.addEventListener('click', function() {
-            document.getElementById('apartments').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const target = document.getElementById('apartments');
+            if (target) {
+                const headerHeight = 20;
+                const targetPosition = target.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     }
 

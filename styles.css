@@ -194,9 +194,22 @@ body {
 /* Hero Section */
 .hero-section {
     background: #FFFFFF;
-    padding: 6rem 0;
-    padding-top: calc(6rem + 80px);
-    min-height: 600px;
+    padding: 4rem 0;
+    padding-top: calc(3rem + 80px);
+    min-height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #FF8C00, #FF6B00, transparent);
+    animation: slideIn 1.5s ease-out;
 }
 
 .hero-text {
@@ -221,6 +234,52 @@ body {
     line-height: var(--line-height-tight);
     margin-bottom: var(--spacing-sm);
     white-space: nowrap;
+    position: relative;
+}
+
+.hero-headline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 195px;
+    height: 8px;
+    background: linear-gradient(90deg, 
+        #FF8C00 0%, 
+        #FF6B00 25%,
+        #FF8C00 50%, 
+        #FF6B00 75%,
+        #FF8C00 100%
+    );
+    border-radius: 50px;
+    opacity: 1;
+    
+    /* Brush-like texture effect */
+    box-shadow: 
+        0 1px 0 rgba(255, 140, 0, 0.3),
+        0 -1px 0 rgba(255, 107, 0, 0.3),
+        2px 0 0 rgba(255, 140, 0, 0.2),
+        -2px 0 0 rgba(255, 107, 0, 0.2);
+    
+    /* Irregular brush stroke edges */
+    clip-path: polygon(
+        0% 20%, 5% 0%, 15% 30%, 25% 10%, 35% 25%, 
+        45% 5%, 55% 35%, 65% 15%, 75% 30%, 85% 0%, 
+        95% 25%, 100% 15%, 100% 85%, 95% 100%, 85% 70%, 
+        75% 90%, 65% 75%, 55% 95%, 45% 70%, 35% 85%, 
+        25% 95%, 15% 70%, 5% 100%, 0% 80%
+    );
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .hero-subheadline {
@@ -243,14 +302,14 @@ body {
     font-weight: var(--font-semibold);
     border: none;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     box-shadow: var(--shadow-card);
 }
 
 .explore-btn:hover {
     background: var(--primary-dark-blue);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(58, 74, 92, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
 }
 
 .hero-building {
@@ -506,6 +565,117 @@ body {
     font-size: var(--font-xs);
     font-weight: var(--font-medium);
     color: var(--neutral-charcoal);
+}
+
+.booking-rating {
+    background: linear-gradient(135deg, #003580, #0057b8);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-md);
+    font-weight: var(--font-bold);
+    font-size: var(--font-xs);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.25rem;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 53, 128, 0.2);
+    white-space: nowrap;
+}
+
+.rating-source {
+    color: var(--color-gray-600);
+    font-size: var(--font-xs);
+    font-weight: var(--font-medium);
+}
+
+/* Apartment Booking Button */
+.apartment-booking {
+    margin-top: var(--spacing-sm);
+}
+
+.booking-btn {
+    background: linear-gradient(135deg, #003580, #0057b8);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    padding: 0.75rem 1.25rem;
+    font-size: var(--font-sm);
+    font-weight: var(--font-semibold);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 53, 128, 0.2);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+}
+
+.booking-btn:hover {
+    background: linear-gradient(135deg, #0057b8, #004494);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 53, 128, 0.3);
+}
+
+.booking-btn i {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Compact Booking Button Layout */
+.apartment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+    gap: var(--spacing-sm);
+}
+
+.apartment-title-location {
+    flex: 1;
+}
+
+.apartment-booking-compact {
+    flex-shrink: 0;
+}
+
+.apartment-rating-booking {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.booking-btn-compact {
+    background: linear-gradient(135deg, #003580, #0057b8);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    padding: 0.5rem 1rem;
+    font-size: var(--font-xs);
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 53, 128, 0.2);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 2.25rem;
+}
+
+.booking-btn-compact:hover {
+    background: linear-gradient(135deg, #0057b8, #004494);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 53, 128, 0.3);
+}
+
+.booking-btn-compact i {
+    width: 0.875rem;
+    height: 0.875rem;
 }
 
 .location-info {
@@ -854,23 +1024,7 @@ input[type="date"][lang="en-GB"] {
     font-weight: 600 !important;
 }
 
-/* Add visual hint for Croatian format */
-.croatian-locale .form-field label[data-translate="form-checkin"]::after,
-.croatian-locale .form-field label[data-translate="form-checkout"]::after {
-    content: " (dd.mm.yyyy)";
-    font-size: 0.8em;
-    color: var(--neutral-light-text);
-    font-weight: normal;
-}
 
-/* English date format hint */
-.english-locale .form-field label[data-translate="form-checkin"]::after,
-.english-locale .form-field label[data-translate="form-checkout"]::after {
-    content: " (dd/mm/yyyy)";
-    font-size: 0.8em;
-    color: var(--neutral-light-text);
-    font-weight: normal;
-}
 
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -1068,8 +1222,8 @@ input[type="date"][lang="en-GB"] {
     }
     
     .hero-section {
-        padding-top: calc(6rem + 70px);
-        min-height: 550px;
+        padding-top: calc(3rem + 70px);
+        min-height: 500px;
     }
     
     .hero-content {
@@ -1083,6 +1237,12 @@ input[type="date"][lang="en-GB"] {
     .hero-headline {
         font-size: var(--font-3xl);
         white-space: normal;
+    }
+    
+    .hero-headline::after {
+        width: 140px;
+        height: 6px;
+        bottom: -6px;
     }
     
     .navigation {
@@ -1117,6 +1277,33 @@ input[type="date"][lang="en-GB"] {
     .gallery-indicator {
         width: 12px;
         height: 12px;
+    }
+    
+    .booking-btn {
+        padding: 0.6rem 1rem;
+        font-size: var(--font-xs);
+    }
+    
+    .apartment-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .apartment-rating-booking {
+        justify-content: center;
+    }
+    
+    .booking-btn-compact {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        justify-content: center;
+        height: 2rem;
+    }
+    
+    .booking-rating {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        height: 2rem;
     }
     
     .location-map iframe {
@@ -1155,9 +1342,9 @@ input[type="date"][lang="en-GB"] {
 
 @media (max-width: 480px) {
     .hero-section {
-        padding: var(--spacing-lg) 0;
-        padding-top: calc(var(--spacing-lg) + 70px);
-        min-height: 500px;
+        padding: var(--spacing-md) 0;
+        padding-top: calc(var(--spacing-md) + 70px);
+        min-height: 450px;
     }
     
     .hero-content {
@@ -1179,6 +1366,24 @@ input[type="date"][lang="en-GB"] {
     
     .apartment-gallery {
         height: 280px;
+    }
+    
+    .booking-btn-compact {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.7rem;
+        height: 1.75rem;
+    }
+    
+    .booking-rating {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.7rem;
+        height: 1.75rem;
+    }
+    
+    .apartment-rating-booking {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
     }
 }
 
