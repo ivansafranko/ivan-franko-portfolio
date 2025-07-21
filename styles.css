@@ -112,6 +112,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     word-spacing: 0.3rem;
+    font-size: 1.75rem; /* Explicit font-size to fix deprecation warning */
 }
 
 .navigation {
@@ -1301,6 +1302,7 @@ input[type="date"][lang="en-GB"] {
         line-height: 1.1;
         flex: 1 1 auto;
         white-space: nowrap;
+        font-size: 1.3rem; /* Explicit font-size to fix deprecation warning */
     }
     .nav-mobile-row2 {
         display: flex;

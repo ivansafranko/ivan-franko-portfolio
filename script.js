@@ -288,22 +288,28 @@ function updateLanguage(lang) {
     
     // Update language toggle button
     const languageToggle = document.getElementById('languageToggle');
-    const flagIcon = languageToggle.querySelector('.flag-display');
-    const langText = languageToggle.querySelector('.lang-text');
-    
-    if (lang === 'hr') {
-        flagIcon.className = 'fi fi-hr flag-display';
-        langText.textContent = 'HR';
-        document.documentElement.lang = 'hr';
-        document.body.classList.add('croatian-locale');
-        document.body.classList.remove('english-locale');
-    } else {
-        flagIcon.className = 'fi fi-gb flag-display';
-        langText.textContent = 'EN';
-        document.documentElement.lang = 'en';
-        document.body.classList.add('english-locale');
-        document.body.classList.remove('croatian-locale');
+    if (languageToggle) {
+        const flagIcon = languageToggle.querySelector('.flag-display');
+        const langText = languageToggle.querySelector('.lang-text');
+        
+        if (flagIcon && langText) {
+            if (lang === 'hr') {
+                flagIcon.className = 'fi fi-hr flag-display';
+                langText.textContent = 'HR';
+                document.documentElement.lang = 'hr';
+                document.body.classList.add('croatian-locale');
+                document.body.classList.remove('english-locale');
+            } else {
+                flagIcon.className = 'fi fi-gb flag-display';
+                langText.textContent = 'EN';
+                document.documentElement.lang = 'en';
+                document.body.classList.add('english-locale');
+                document.body.classList.remove('croatian-locale');
+            }
+        }
     }
+    
+
     
     // Update flag icon for both desktop and mobile
     const flagDesktop = document.querySelector('#languageToggle .flag-display');
