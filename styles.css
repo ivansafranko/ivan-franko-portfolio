@@ -1842,6 +1842,7 @@ html {
     display: flex;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
     min-height: 0;
   }
   .nav-mobile-logo {
@@ -1861,13 +1862,12 @@ html {
     align-items: center;
     gap: 0.5rem;
     margin-left: auto;
-    justify-content: flex-end;
   }
 }
 
-/* Info section: slightly larger font for text */
+/* Info section: increase font size for text */
 .contact-info p, .contact-info h4, .location-info p, .location-info h4 {
-  font-size: 0.8rem !important;
+  font-size: 0.95rem !important;
 }
 
 /* Flag transition for seamless switch */
