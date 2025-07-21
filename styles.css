@@ -1876,3 +1876,12 @@ html {
 .flag-display {
   transition: none !important;
 } 
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+} 
