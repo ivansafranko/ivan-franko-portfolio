@@ -1861,35 +1861,14 @@ html {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-  }
-  .nav-mobile-row2 {
-    display: flex;
+    margin-left: auto;
     justify-content: flex-end;
-    width: 100%;
-    margin-bottom: 0.2rem;
-  }
-  .nav-mobile-contact {
-    margin-right: 0.5rem;
-    text-align: right;
-    max-width: 140px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .header {
-    height: 100px;
-  }
-  .header-content {
-    padding: 1.2rem 0 0.4rem 0;
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
-/* Info section: smaller font for all views (keep icon size) */
-.contact-info, .location-info {
+/* Info section: only font size smaller for text */
+.contact-info p, .contact-info h4, .location-info p, .location-info h4 {
   font-size: 0.65rem !important;
-  padding: 0.7rem 0.7rem !important;
 }
 
 /* Flag transition for seamless switch */
