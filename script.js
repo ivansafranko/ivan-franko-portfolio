@@ -68,7 +68,7 @@ const translations = {
         'location1-highlights-title': 'Prednosti lokacije',
         'location1-highlights-text': 'Vrhunska lokacija u centru grada, samo 3 minute hoda od Aquae Vivae vodenog parka. Blizu restorana, trgovina i termalnih izvora. Savršeno za istraživanje grada pješice.',
         'location2-highlights-title': 'Prednosti lokacije',
-        'location2-highlights-text': 'Smješteno u centru grada vrlo blizu bolnice za medicinsku rehabilitaciju. 5 minuta hoda do vodenog parka Aquae Vivae. Izvrsna lokacija za pacijente bolnice i posjetitelje.',
+        'location2-highlights-text': 'Smješteno u centru grada vrlo blizu bolnice za medicinsku rehabilitaciju i klinike Magdalena za kardiovaskularne bolesti. 5 minuta hoda do vodenog parka Aquae Vivae. Izvrsna lokacija za pacijente bolnice i posjetitelje.',
         
         // Testimonials
         'testimonials-headline': 'Iskustva gostiju',
@@ -168,7 +168,7 @@ const translations = {
         'location1-highlights-title': 'Location Highlights',
         'location1-highlights-text': 'Prime city center location just 3 minutes walk from Aquae Vivae Water Park. Close to restaurants, shops, and thermal springs. Perfect for exploring the town on foot.',
         'location2-highlights-title': 'Location Highlights',
-        'location2-highlights-text': 'Located in city center very close to medical rehabilitation hospital. 5 minutes walk to Aquae Vivae Water Park. Excellent location for hospital patients and visitors.',
+        'location2-highlights-text': 'Located in city center very close to medical rehabilitation hospital and Magdalena Clinic for cardiovascular diseases. 5 minutes walk to Aquae Vivae Water Park. Excellent location for hospital patients and visitors.',
         
         // Testimonials
         'testimonials-headline': 'Guest Experiences',
