@@ -1287,15 +1287,19 @@ input[type="date"][lang="en-GB"] {
         justify-content: space-between;
         width: 100%;
         padding-bottom: 0.2rem;
+        min-height: 60px;
     }
-    .nav-mobile-row1 .logo h1 {
-        font-size: 1.2rem;
+    .nav-mobile-logo {
+        font-size: 1.3rem;
         margin: 0;
-        padding: 0;
+        padding: 0 0.5rem 0 0;
         color: #fff;
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
         letter-spacing: 0.01em;
+        line-height: 1.1;
+        flex: 1 1 auto;
+        white-space: nowrap;
     }
     .nav-mobile-row2 {
         display: flex;
@@ -1401,11 +1405,11 @@ input[type="date"][lang="en-GB"] {
     }
     
     .header {
-        height: 92px;
+        height: 100px;
     }
     
     .header-content {
-        padding: 1.1rem 0 0.4rem 0;
+        padding: 1.2rem 0 0.4rem 0;
     }
     
     .logo h1 {
@@ -1610,7 +1614,7 @@ input[type="date"][lang="en-GB"] {
     }
     /* Info section: smaller font and icons */
     .contact-info, .location-info {
-        font-size: 0.82rem;
+        font-size: 0.75rem;
     }
     .contact-icon, .location-info [data-lucide] {
         font-size: 1rem !important;
@@ -1814,4 +1818,14 @@ html {
     border-color: var(--primary-navy);
     outline: 2px solid var(--accent-orange);
     outline-offset: 2px;
+} 
+
+/* Info section: smaller font for all views (keep icon size) */
+.contact-info, .location-info {
+  font-size: 0.75rem;
+}
+
+/* Flag transition for seamless switch */
+.flag-display {
+  transition: opacity 0.15s;
 } 
