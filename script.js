@@ -305,6 +305,16 @@ function updateLanguage(lang) {
         document.body.classList.remove('croatian-locale');
     }
     
+    // Update flag icon for both desktop and mobile
+    const flagDesktop = document.querySelector('#languageToggle .flag-display');
+    const flagMobile = document.querySelector('#languageToggleMobile .flag-display');
+    if (flagDesktop) {
+        flagDesktop.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
+    }
+    if (flagMobile) {
+        flagMobile.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
+    }
+    
     // Don't change date picker locale during initial page load - only during manual switches
     // (The date pickers are initialized with the correct language already)
     
