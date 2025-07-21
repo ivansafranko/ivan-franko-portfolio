@@ -1007,6 +1007,7 @@ input[type="date"][lang="en-GB"] {
     color: var(--accent-orange);
     stroke-width: 2;
     display: inline-block;
+    margin-right: 0.5em;
 }
 
 /* Fallback styling for when Lucide icons don't load */
@@ -1924,4 +1925,8 @@ html {
   .mobile-menu {
     top: 60px !important;
   }
+} 
+
+section h1, article h1, nav h1, aside h1 {
+  font-size: 1.75rem;
 } 
