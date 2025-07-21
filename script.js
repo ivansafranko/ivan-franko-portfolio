@@ -35,7 +35,7 @@ const translations = {
         'location2-title': 'Centar grada - Blizu bolnice',
         
         // Apartment names
-        'apt1-name': 'Dada Apartman 1 (45m²)',
+        'apt1-name': 'Dada Apartman 1 (50m²)',
         'apt2-name': 'Dada Apartman 2 (70m²)',
         'apt3-name': 'Studio Apartman Šafranko (25m²)',
         'apt4-name': 'Soba Šafranko (17m²)',
@@ -135,7 +135,7 @@ const translations = {
         'location2-title': 'City Center - Near Hospital',
         
         // Apartment names
-        'apt1-name': 'Dada Apartment 1 (45m²)',
+        'apt1-name': 'Dada Apartment 1 (50m²)',
         'apt2-name': 'Dada Apartment 2 (70m²)',
         'apt3-name': 'Studio Apartment Šafranko (25m²)',
         'apt4-name': 'Soba Šafranko (17m²)',
