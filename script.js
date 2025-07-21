@@ -22,11 +22,11 @@ const translations = {
         'about-headline': 'Otkrijte Krapinske Toplice',
         'about-subheadline': 'Mirni lječilišni grad u srcu Hrvatske, savršen za opuštanje i oporavak.',
         'about-card1-title': 'Mirna lokacija',
-        'about-card1-text': 'Smještene u prekrasnoj hrvatskoj prirodi, Krapinske Toplice nude miran bijeg od gradske vreve sa svojima prirodnim termalnim izvorima i mirnom atmosferom.',
-        'about-card2-title': 'Aquae Vivae vodni park',
+        'about-card1-text': 'Uživajte u odmoru u srcu prirode! Naši apartmani u Krapinskim Toplicama nude vam udoban smještaj uz blizinu termalnih izvora i savršeno mirnu atmosferu.',
+        'about-card2-title': 'Aquae Vivae vodeni park',
         'about-card2-text': 'Samo nekoliko minuta od naših apartmana, uživajte u renomiranom vodenom parku s termalnim bazenima, wellness sadržajima i zabavnim aktivnostima za cijelu obitelj.',
         'about-card3-title': 'Moderan komfor',
-        'about-card3-text': 'Naši pažljivo odabrani apartmani kombiniraju tradicionalni hrvatski šarm s modernim sadržajima, osiguravajući da vaš boravak bude udoban i nezaboravan.',
+        'about-card3-text': 'Naši apartmani nude suvremeno opremljen prostor i sve što vam je potrebno za ugodan, bezbrižan i nezaboravan boravak.',
         
         // Apartments section
         'apartments-headline': 'Moderni apartmani',
@@ -73,8 +73,8 @@ const translations = {
         // Testimonials
         'testimonials-headline': 'Iskustva gostiju',
         'testimonials-subheadline': 'Što naši gosti kažu o svom boravku',
-        'testimonial1-text': '"Apartman Dada u Krapinskim Toplicama apsolutno zaslužuje sve pohvale! Lokacija je izvrsna – mirna, a opet blizu svega što vam treba. Domaćin je izuzetno ljubazan, susretljiv i uvijek dostupan za svaku informaciju ili pomoć, što boravak čini još ugodnijim. Sam apartman je besprijekorno čist, uredan i moderno opremljen. Sve je bilo 10/10, toplo preporučujem svima koji žele savršen spoj komfora i gostoljubivosti!"',
-        'testimonial2-text': '"We absolutely enjoyed one night in this apartment. Everything was clean, nice, the landlord very helpful and friendly. Thank you for possibility to rest here after long journey. For sure we will come back again."',
+        'testimonial1-text': '"We absolutely enjoyed one night in this apartment. Everything was clean, nice, the landlord very helpful and friendly. Thank you for possibility to rest here after long journey. For sure we will come back again."',
+        'testimonial2-text': '"Jako lijepo sređen apartman, super lokacija u blizini bazena, vrlo ljubazan vlasnik. Sve preporuke."',
         'testimonial3-text': '"Very comfortable and cosy apartment with everything you could need. Host was extremely pleasant and helpful. Location is great, just a minute or two from the Aqua Vivae thermal spa."',
         
         // Contact section
@@ -122,11 +122,11 @@ const translations = {
         'about-headline': 'Discover Krapinske Toplice',
         'about-subheadline': 'A peaceful spa town in the heart of Croatia, perfect for relaxation and rejuvenation.',
         'about-card1-title': 'Tranquil Location',
-        'about-card1-text': 'Nestled in the beautiful Croatian countryside, Krapinske Toplice offers a serene escape from city life with its natural thermal springs and peaceful atmosphere.',
+        'about-card1-text': 'Enjoy your vacation in the heart of nature! Our apartments in Krapinske Toplice offer you comfortable accommodation near thermal springs and perfectly peaceful atmosphere.',
         'about-card2-title': 'Aquae Vivae Water Park',
         'about-card2-text': 'Just minutes from our apartments, enjoy the renowned water park featuring thermal pools, wellness facilities, and fun activities for the whole family.',
         'about-card3-title': 'Modern Comfort',
-        'about-card3-text': 'Our carefully selected apartments combine traditional Croatian charm with modern amenities, ensuring your stay is both comfortable and memorable.',
+        'about-card3-text': 'Our apartments offer modernly equipped space and everything you need for a pleasant, carefree and unforgettable stay.',
         
         // Apartments section
         'apartments-headline': 'Modern Apartments',
@@ -173,8 +173,8 @@ const translations = {
         // Testimonials
         'testimonials-headline': 'Guest Experiences',
         'testimonials-subheadline': 'What our guests say about their stay',
-        'testimonial1-text': '"Apartman Dada u Krapinskim Toplicama apsolutno zaslužuje sve pohvale! Lokacija je izvrsna – mirna, a opet blizu svega što vam treba. Domaćin je izuzetno ljubazan, susretljiv i uvijek dostupan za svaku informaciju ili pomoć, što boravak čini još ugodnijim. Sam apartman je besprijekorno čist, uredan i moderno opremljen. Sve je bilo 10/10, toplo preporučujem svima koji žele savršen spoj komfora i gostoljubivosti!"',
-        'testimonial2-text': '"We absolutely enjoyed one night in this apartment. Everything was clean, nice, the landlord very helpful and friendly. Thank you for possibility to rest here after long journey. For sure we will come back again."',
+        'testimonial1-text': '"We absolutely enjoyed one night in this apartment. Everything was clean, nice, the landlord very helpful and friendly. Thank you for possibility to rest here after long journey. For sure we will come back again."',
+        'testimonial2-text': '"Very nicely arranged apartment, great location near the pool, very kind owner. All recommendations."',
         'testimonial3-text': '"Very comfortable and cosy apartment with everything you could need. Host was extremely pleasant and helpful. Location is great, just a minute or two from the Aqua Vivae thermal spa."',
         
         // Contact section
