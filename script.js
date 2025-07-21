@@ -73,9 +73,9 @@ const translations = {
         // Testimonials
         'testimonials-headline': 'Iskustva gostiju',
         'testimonials-subheadline': 'Što naši gosti kažu o svom boravku',
-        'testimonial1-text': '"Savršena lokacija u blizini vodenog parka. Apartman je bio besprijekorno čist i imao je sve što nam je trebalo. Dada je bila vrlo korisna i odzivna. Toplo preporučujem!"',
-        'testimonial2-text': '"Prekrasna mirna lokacija, upravo ono što smo tražili. Apartman s vrtom bio je divan i miran. Odliča baza za istraživanje regije."',
-        'testimonial3-text': '"Odličan omjer cijene i kvalitete. Čisto, udobno i savršeno smješteno. Termalni izvori su nevjerojatni i tako blizu apartmana."',
+        'testimonial1-text': '"Apartman Dada u Krapinskim Toplicama apsolutno zaslužuje sve pohvale! Lokacija je izvrsna – mirna, a opet blizu svega što vam treba. Domaćin je izuzetno ljubazan, susretljiv i uvijek dostupan za svaku informaciju ili pomoć, što boravak čini još ugodnijim. Sam apartman je besprijekorno čist, uredan i moderno opremljen. Sve je bilo 10/10, toplo preporučujem svima koji žele savršen spoj komfora i gostoljubivosti!"',
+        'testimonial2-text': '"We absolutely enjoyed one night in this apartment. Everything was clean, nice, the landlord very helpful and friendly. Thank you for possibility to rest here after long journey. For sure we will come back again."',
+        'testimonial3-text': '"Very comfortable and cosy apartment with everything you could need. Host was extremely pleasant and helpful. Location is great, just a minute or two from the Aqua Vivae thermal spa."',
         
         // Contact section
         'contact-headline': 'Kontaktirajte nas',
@@ -173,9 +173,9 @@ const translations = {
         // Testimonials
         'testimonials-headline': 'Guest Experiences',
         'testimonials-subheadline': 'What our guests say about their stay',
-        'testimonial1-text': '"Perfect location near the water park. The apartment was spotless and had everything we needed. Dada was very helpful and responsive. Highly recommend!"',
-        'testimonial2-text': '"Beautiful quiet location, exactly what we were looking for. The garden apartment was lovely and peaceful. Great base for exploring the region."',
-        'testimonial3-text': '"Excellent value for money. Clean, comfortable, and perfectly located. The thermal springs are amazing and so close to the apartments."',
+        'testimonial1-text': '"Apartman Dada u Krapinskim Toplicama apsolutno zaslužuje sve pohvale! Lokacija je izvrsna – mirna, a opet blizu svega što vam treba. Domaćin je izuzetno ljubazan, susretljiv i uvijek dostupan za svaku informaciju ili pomoć, što boravak čini još ugodnijim. Sam apartman je besprijekorno čist, uredan i moderno opremljen. Sve je bilo 10/10, toplo preporučujem svima koji žele savršen spoj komfora i gostoljubivosti!"',
+        'testimonial2-text': '"We absolutely enjoyed one night in this apartment. Everything was clean, nice, the landlord very helpful and friendly. Thank you for possibility to rest here after long journey. For sure we will come back again."',
+        'testimonial3-text': '"Very comfortable and cosy apartment with everything you could need. Host was extremely pleasant and helpful. Location is great, just a minute or two from the Aqua Vivae thermal spa."',
         
         // Contact section
         'contact-headline': 'Get in Touch',
