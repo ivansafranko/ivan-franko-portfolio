@@ -73,9 +73,9 @@ const translations = {
         // Testimonials
         'testimonials-headline': 'Iskustva gostiju',
         'testimonials-subheadline': 'Što naši gosti kažu o svom boravku',
-        'testimonial1-text': '"We absolutely enjoyed one night in this apartment. Everything was clean, nice, the landlord very helpful and friendly. Thank you for possibility to rest here after long journey. For sure we will come back again."',
+        'testimonial1-text': '"Apsolutno smo uživali jednu noć u ovom apartmanu. Sve je bilo čisto, lijepo, vlasnik vrlo koristan i prijateljski. Hvala vam na mogućnosti da se ovdje odmorimo nakon dugog putovanja. Sigurno ćemo se ponovno vratiti."',
         'testimonial2-text': '"Jako lijepo sređen apartman, super lokacija u blizini bazena, vrlo ljubazan vlasnik. Sve preporuke."',
-        'testimonial3-text': '"Very comfortable and cosy apartment with everything you could need. Host was extremely pleasant and helpful. Location is great, just a minute or two from the Aqua Vivae thermal spa."',
+        'testimonial3-text': '"Vrlo udoban i ugodan apartman sa svim što vam treba. Domaćin je bio izuzetno prijatan i koristan. Lokacija je odlična, samo minutu ili dvije od termalnog spa-a Aqua Vivae."',
         
         // Contact section
         'contact-headline': 'Kontaktirajte nas',
