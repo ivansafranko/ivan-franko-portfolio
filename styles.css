@@ -1930,3 +1930,9 @@ html {
 h1 {
   font-size: 1.75rem;
 } 
+
+@media (max-width: 1200px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+} 
