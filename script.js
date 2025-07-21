@@ -308,11 +308,20 @@ function updateLanguage(lang) {
     // Update flag icon for both desktop and mobile
     const flagDesktop = document.querySelector('#languageToggle .flag-display');
     const flagMobile = document.querySelector('#languageToggleMobile .flag-display');
+    const langTextDesktop = document.querySelector('#languageToggle .lang-text');
+    const langTextMobile = document.querySelector('#languageToggleMobile .lang-text');
+    
     if (flagDesktop) {
         flagDesktop.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
     }
     if (flagMobile) {
         flagMobile.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
+    }
+    if (langTextDesktop) {
+        langTextDesktop.textContent = lang === 'hr' ? 'HR' : 'EN';
+    }
+    if (langTextMobile) {
+        langTextMobile.textContent = lang === 'hr' ? 'HR' : 'EN';
     }
     
     // Don't change date picker locale during initial page load - only during manual switches
