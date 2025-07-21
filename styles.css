@@ -1841,9 +1841,8 @@ html {
   .nav-mobile-row1 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    min-height: 60px;
+    min-height: 0;
   }
   .nav-mobile-logo {
     font-size: 1.1rem;
@@ -1854,7 +1853,7 @@ html {
     font-weight: 700;
     letter-spacing: 0.01em;
     line-height: 1.1;
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     white-space: nowrap;
   }
   .nav-mobile-actions {
@@ -1866,9 +1865,9 @@ html {
   }
 }
 
-/* Info section: only font size smaller for text */
+/* Info section: slightly larger font for text */
 .contact-info p, .contact-info h4, .location-info p, .location-info h4 {
-  font-size: 0.65rem !important;
+  font-size: 0.8rem !important;
 }
 
 /* Flag transition for seamless switch */
