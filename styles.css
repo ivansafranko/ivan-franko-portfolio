@@ -1846,7 +1846,7 @@ html {
     min-height: 60px;
   }
   .nav-mobile-logo {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 0;
     padding: 0 0.5rem 0 0;
     color: #fff;
@@ -1857,23 +1857,24 @@ html {
     flex: 1 1 auto;
     white-space: nowrap;
   }
-  .nav-mobile-row2 {
+  .nav-mobile-actions {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 0.5rem;
+  }
+  .nav-mobile-row2 {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
     margin-bottom: 0.2rem;
   }
-  .nav-mobile-row2 .nav-cta {
-    flex: 1 1 60%;
+  .nav-mobile-contact {
     margin-right: 0.5rem;
-    text-align: center;
-  }
-  .nav-mobile-row2 .language-toggle {
-    flex: 1 1 40%;
-    min-width: 80px;
-    justify-content: center;
+    text-align: right;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .header {
     height: 100px;
@@ -1887,10 +1888,11 @@ html {
 
 /* Info section: smaller font for all views (keep icon size) */
 .contact-info, .location-info {
-  font-size: 0.7rem;
+  font-size: 0.65rem !important;
+  padding: 0.7rem 0.7rem !important;
 }
 
 /* Flag transition for seamless switch */
 .flag-display {
-  transition: none;
+  transition: none !important;
 } 
