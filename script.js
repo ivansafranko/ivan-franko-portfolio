@@ -310,19 +310,12 @@ function updateLanguage(lang) {
     const flagMobile = document.querySelector('#languageToggleMobile .flag-display');
     const langTextDesktop = document.querySelector('#languageToggle .lang-text');
     const langTextMobile = document.querySelector('#languageToggleMobile .lang-text');
+    
     if (flagDesktop) {
-        flagDesktop.style.opacity = 0;
-        setTimeout(() => {
-            flagDesktop.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
-            flagDesktop.style.opacity = 1;
-        }, 100);
+        flagDesktop.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
     }
     if (flagMobile) {
-        flagMobile.style.opacity = 0;
-        setTimeout(() => {
-            flagMobile.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
-            flagMobile.style.opacity = 1;
-        }, 100);
+        flagMobile.className = 'fi flag-display ' + (lang === 'hr' ? 'fi-hr' : 'fi-gb');
     }
     if (langTextDesktop) {
         langTextDesktop.textContent = lang === 'hr' ? 'HR' : 'EN';
