@@ -662,4 +662,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('languageToggle').click();
         });
     }
+
+    // Set tabindex=0 for all .flatpickr-input elements for accessibility
+    setTimeout(() => {
+      document.querySelectorAll('.flatpickr-input').forEach(input => input.tabIndex = 0);
+    }, 500);
 }); 
