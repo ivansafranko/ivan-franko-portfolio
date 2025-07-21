@@ -1822,12 +1822,75 @@ html {
     outline-offset: 2px;
 } 
 
+/* Hide desktop logo on mobile, show only on desktop */
+@media (max-width: 768px) {
+  .logo { display: none !important; }
+  .nav-mobile-logo { display: block !important; }
+}
+@media (min-width: 769px) {
+  .nav-mobile-logo { display: none !important; }
+}
+
+/* Mobile navbar layout */
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-mobile-row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 60px;
+  }
+  .nav-mobile-logo {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0 0.5rem 0 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
+  .nav-mobile-row2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+  .nav-mobile-row2 .nav-cta {
+    flex: 1 1 60%;
+    margin-right: 0.5rem;
+    text-align: center;
+  }
+  .nav-mobile-row2 .language-toggle {
+    flex: 1 1 40%;
+    min-width: 80px;
+    justify-content: center;
+  }
+  .header {
+    height: 100px;
+  }
+  .header-content {
+    padding: 1.2rem 0 0.4rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* Info section: smaller font for all views (keep icon size) */
 .contact-info, .location-info {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 /* Flag transition for seamless switch */
 .flag-display {
-  transition: opacity 0.15s;
+  transition: none;
 } 
