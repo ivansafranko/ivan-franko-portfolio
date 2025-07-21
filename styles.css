@@ -233,6 +233,8 @@ body {
 }
 
 .hero-text {
+    max-width: 540px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,7 +243,7 @@ body {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: minmax(0, 1fr) 500px;
     gap: var(--spacing-2xl);
     align-items: center;
     min-height: 500px;
