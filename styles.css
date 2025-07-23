@@ -490,6 +490,12 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.apartment-gallery.gallery-enabled {
+    opacity: 1;
 }
 
 .gallery-images {
@@ -505,15 +511,15 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    transform: scale(0.99);
     opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .gallery-image.active,
 .gallery-image:first-child {
+    transform: scale(1);
     opacity: 1;
-    pointer-events: auto;
 }
 
 .gallery-prev,
@@ -588,6 +594,27 @@ body {
 .gallery-enabled .gallery-indicator {
     pointer-events: auto;
     opacity: 1;
+}
+
+/* Loading state */
+.gallery-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 20;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* Image galleries now handle apartment photos */

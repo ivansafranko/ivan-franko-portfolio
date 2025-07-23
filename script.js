@@ -444,44 +444,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextBtn = gallery.querySelector('.gallery-next');
         const indicators = gallery.querySelectorAll('.gallery-indicator');
         let currentIndex = 0;
-        let imagesLoaded = 0;
-
-        // Preload all images in this gallery
-        function preloadImages() {
-            images.forEach((img, index) => {
-                const newImg = new Image();
-                newImg.onload = () => {
-                    imagesLoaded++;
-                    // Enable gallery interaction when all images are loaded
-                    if (imagesLoaded === images.length) {
-                        enableGallery();
-                    }
-                };
-                newImg.onerror = () => {
-                    imagesLoaded++;
-                    if (imagesLoaded === images.length) {
-                        enableGallery();
-                    }
-                };
-                newImg.src = img.src;
-            });
-        }
+        let galleryReady = true;
 
         function enableGallery() {
-            // Enable buttons and indicators
+            galleryReady = true;
             gallery.classList.add('gallery-enabled');
+            console.log('Gallery enabled');
         }
 
         function showImage(index) {
+            // Set all images to transparent and scaled down
             images.forEach((img, i) => {
-                if (i === index) {
-                    img.style.opacity = '1';
-                    img.classList.add('active');
-                } else {
-                    img.style.opacity = '0';
-                    img.classList.remove('active');
-                }
+                img.style.opacity = '0';
+                img.style.transform = 'scale(0.99)';
+                img.classList.remove('active');
             });
+            
+            // Make target image visible and full scale
+            const targetImage = images[index];
+            targetImage.style.opacity = '1';
+            targetImage.style.transform = 'scale(1)';
+            targetImage.classList.add('active');
+            
+            // Update indicators
             indicators.forEach((indicator, i) => {
                 indicator.classList.toggle('active', i === index);
             });
@@ -508,11 +493,23 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Start preloading images
-        preloadImages();
+        // Force decode all images before showing gallery
+        const imagePromises = Array.from(images).map(img => {
+            return new Promise((resolve) => {
+                if (img.complete && img.naturalWidth > 0) {
+                    resolve();
+                } else {
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                }
+            });
+        });
         
-        // Show first image initially
-        showImage(0);
+        Promise.all(imagePromises).then(() => {
+            // All images are decoded, now show gallery
+            gallery.classList.add('gallery-enabled');
+            showImage(0);
+        });
     });
 
     // Testimonial hover effects (CSS-only, no auto-rotation)
