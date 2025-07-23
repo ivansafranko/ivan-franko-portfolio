@@ -444,6 +444,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextBtn = gallery.querySelector('.gallery-next');
         const indicators = gallery.querySelectorAll('.gallery-indicator');
         let currentIndex = 0;
+        let imagesLoaded = 0;
+
+        // Preload all images in this gallery
+        function preloadImages() {
+            images.forEach((img, index) => {
+                const newImg = new Image();
+                newImg.onload = () => {
+                    imagesLoaded++;
+                    // Enable gallery interaction when all images are loaded
+                    if (imagesLoaded === images.length) {
+                        enableGallery();
+                    }
+                };
+                newImg.onerror = () => {
+                    imagesLoaded++;
+                    if (imagesLoaded === images.length) {
+                        enableGallery();
+                    }
+                };
+                newImg.src = img.src;
+            });
+        }
+
+        function enableGallery() {
+            // Enable buttons and indicators
+            gallery.classList.add('gallery-enabled');
+        }
 
         function showImage(index) {
             images.forEach((img, i) => {
@@ -481,6 +508,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+        // Start preloading images
+        preloadImages();
+        
         // Show first image initially
         showImage(0);
     });

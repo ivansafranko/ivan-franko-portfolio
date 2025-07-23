@@ -535,6 +535,8 @@ body {
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 10;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .gallery-prev {
@@ -568,11 +570,24 @@ body {
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .gallery-indicator.active {
     background: var(--accent-orange);
     transform: scale(1.2);
+}
+
+.gallery-enabled .gallery-prev,
+.gallery-enabled .gallery-next {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.gallery-enabled .gallery-indicator {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 /* Image galleries now handle apartment photos */
