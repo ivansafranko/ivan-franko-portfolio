@@ -447,7 +447,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function showImage(index) {
             images.forEach((img, i) => {
-                img.style.display = i === index ? 'block' : 'none';
+                if (i === index) {
+                    img.style.opacity = '1';
+                    img.classList.add('active');
+                } else {
+                    img.style.opacity = '0';
+                    img.classList.remove('active');
+                }
             });
             indicators.forEach((indicator, i) => {
                 indicator.classList.toggle('active', i === index);

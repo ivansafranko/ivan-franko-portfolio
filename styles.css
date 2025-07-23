@@ -505,12 +505,15 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .gallery-image.active,
 .gallery-image:first-child {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .gallery-prev,
