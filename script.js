@@ -374,6 +374,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Then set language (without trying to change date pickers)
     updateLanguage(savedLanguage);
     
+    // Make body visible after initial language update
+    document.body.style.opacity = '1';
+    
     // Set up language toggle
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
