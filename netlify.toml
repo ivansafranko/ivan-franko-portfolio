@@ -6,6 +6,20 @@
   to = "/success.html"
   status = 200
 
+# Redirect HTTP to HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.apartments-dada.com/*"
+  to = "https://apartments-dada.com/:splat"
+  status = 301
+  force = true
+
 [context.production.environment]
   NODE_VERSION = "18"
 
