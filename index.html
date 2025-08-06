@@ -20,10 +20,20 @@
     <link rel="alternate" hreflang="x-default" href="https://apartments-dada.com/">
     <title data-translate="page-title">Apartmani Dada - Premium smještaj u Krapinskima Toplicama, Hrvatska</title>
     <meta name="description" data-translate="page-description" content="Moderni apartmani za odmor u Krapinskim Toplicama blizu Aquae Vivae parka. WiFi, parking, potpuno opremljeni smještaji u Hrvatskoj lječilišnoj destinaciji.">
+    <meta name="keywords" content="apartmani Krapinske Toplice, smještaj Hrvatska, Aquae Vivae, wellness, spa apartmani, Dada apartments">
+    <meta name="author" content="Apartmani Dada">
+    <meta name="robots" content="index, follow">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=yes">
     
-    <!-- Favicon -->
+    <!-- Favicon and Icons -->
     <link rel="icon" type="image/svg+xml" href="/icon.svg">
-    <link rel="shortcut icon" type="image/x-icon" href="/icon.svg">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1e40af">
+    <meta name="msapplication-TileColor" content="#1e40af">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" media="print" onload="this.media='all'">
@@ -32,6 +42,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="/images/dada-apartments-krapinske-toplice-hero.webp" fetchpriority="high">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -48,26 +64,79 @@
     <meta property="twitter:image" content="https://apartments-dada.com/images/dada-apartments-krapinske-toplice-hero.webp">
 
     <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Apartmani Dada",
-  "url": "https://apartments-dada.com/",
-  "logo": "https://apartments-dada.com/icon.svg",
-  "image": "https://apartments-dada.com/images/dada-apartments-krapinske-toplice-hero.webp",
-  "description": "Premium apartments in Krapinske Toplice, Croatia. Peaceful location near water park with modern amenities and comfort.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Krapinske Toplice",
-    "addressCountry": "HR"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Apartmani Dada - City Center Location",
+    "url": "https://apartments-dada.com/",
+    "logo": "https://apartments-dada.com/icon.svg",
+    "image": "https://apartments-dada.com/images/dada-apartments-krapinske-toplice-hero.webp",
+    "description": "Premium apartments in Krapinske Toplice city center, Croatia. 3 minutes walk from Aquae Vivae Water Park.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ul. Antuna Mihanovića 3H",
+      "addressLocality": "Krapinske Toplice",
+      "postalCode": "49217",
+      "addressCountry": "HR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+385 98 998 2059",
+      "contactType": "customer service",
+      "email": "dragutin.safranko@gmail.com"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.8",
+      "bestRating": "10",
+      "ratingCount": "25"
+    },
+    "priceRange": "€€",
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "WiFi"},
+      {"@type": "LocationFeatureSpecification", "name": "Parking"},
+      {"@type": "LocationFeatureSpecification", "name": "Air Conditioning"},
+      {"@type": "LocationFeatureSpecification", "name": "Kitchen"},
+      {"@type": "LocationFeatureSpecification", "name": "Balcony"}
+    ]
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+385 98 998 2059",
-    "contactType": "customer service",
-    "email": "dragutin.safranko@gmail.com"
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Studio & Soba Šafranko - Residential Area",
+    "url": "https://apartments-dada.com/",
+    "logo": "https://apartments-dada.com/icon.svg",
+    "image": "https://apartments-dada.com/images/apartments/apartment-3/studio-safranko-bedroom-001.webp",
+    "description": "Peaceful apartments near medical rehabilitation hospital and Magdalena clinic. 5 minutes walk to Aquae Vivae Water Park.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ul. Ksavera Šandora Đalskog 2",
+      "addressLocality": "Krapinske Toplice",
+      "postalCode": "49217",
+      "addressCountry": "HR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+385 98 998 2059",
+      "contactType": "customer service",
+      "email": "dragutin.safranko@gmail.com"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.4",
+      "bestRating": "10",
+      "ratingCount": "25"
+    },
+    "priceRange": "€",
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "WiFi"},
+      {"@type": "LocationFeatureSpecification", "name": "Parking"},
+      {"@type": "LocationFeatureSpecification", "name": "Air Conditioning"},
+      {"@type": "LocationFeatureSpecification", "name": "Kitchenette"}
+    ]
   }
-}
+]
 </script>
 </head>
 
@@ -77,7 +146,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>Apartmani Dada</h1>
+                    <h1 lang="hr">Apartmani Dada</h1>
                 </div>
                 <nav class="navigation">
                     <div class="nav-desktop">
@@ -93,7 +162,7 @@
                     
                     <div class="nav-mobile">
                         <div class="nav-mobile-row1">
-                            <h1 class="nav-mobile-logo">Apartmani Dada</h1>
+                            <div class="nav-mobile-logo" lang="hr">Apartmani Dada</div>
                             <div class="nav-mobile-actions">
                                 <button class="language-toggle" id="languageToggleMobile">
                                     <span class="fi fi-hr flag-display"></span>
@@ -124,7 +193,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-headline" data-translate="hero-headline">Apartmani u Krapinskim Toplicama</h1>
+                    <h2 class="hero-headline" data-translate="hero-headline">Apartmani u Krapinskim Toplicama</h2>
                     <p class="hero-subheadline" data-translate="hero-subheadline">Moderni apartmani za odmor blizu Aquae Vivae vodenog parka. Potpuno opremljeni smještaji s WiFi-em, parkingom i prekrasnim pogledom u vodećoj lječilišnoj destinaciji Hrvatske.</p>
                     <div class="hero-cta">
                         <button class="explore-btn" data-translate="explore-btn">Explore Apartments</button>
@@ -170,7 +239,7 @@
                             <div class="apartment-header">
                                 <div class="apartment-title-location">
                                     <h4 data-translate="apt1-name">Dada Apartment 1 - Deluxe Suite (50m²)</h4>
-                                    <p class="apartment-location">Ul. Antuna Mihanovića 3H, Krapinske Toplice</p>
+                                    <p class="apartment-location" lang="hr">Ul. Antuna Mihanovića 3H, Krapinske Toplice</p>
                                 </div>
                                 <div class="apartment-rating-booking">
                                     <div class="apartment-rating">
@@ -220,7 +289,7 @@
                             <div class="apartment-header">
                                 <div class="apartment-title-location">
                                     <h4 data-translate="apt2-name">Dada Apartment 2 (70m²)</h4>
-                                    <p class="apartment-location">Ul. Antuna Mihanovića 3H, Krapinske Toplice</p>
+                                    <p class="apartment-location" lang="hr">Ul. Antuna Mihanovića 3H, Krapinske Toplice</p>
                                 </div>
                                 <div class="apartment-rating-booking">
                                     <div class="apartment-rating">
@@ -284,7 +353,7 @@
                             <div class="apartment-header">
                                 <div class="apartment-title-location">
                                     <h4 data-translate="apt3-name">Studio Apartman Šafranko (25m²)</h4>
-                                    <p class="apartment-location">Ul. Ksavera Šandora Đalskog 2, Krapinske Toplice</p>
+                                    <p class="apartment-location" lang="hr">Ul. Ksavera Šandora Đalskog 2, Krapinske Toplice</p>
                                 </div>
                                 <div class="apartment-rating-booking">
                                     <div class="apartment-rating">
@@ -331,7 +400,7 @@
                             <div class="apartment-header">
                                 <div class="apartment-title-location">
                                     <h4 data-translate="apt4-name">Soba Šafranko (17m²)</h4>
-                                    <p class="apartment-location">Ul. Ksavera Šandora Đalskog 2, Krapinske Toplice</p>
+                                    <p class="apartment-location" lang="hr">Ul. Ksavera Šandora Đalskog 2, Krapinske Toplice</p>
                                 </div>
                                 <div class="apartment-rating-booking">
                                     <div class="apartment-rating">
@@ -410,17 +479,17 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-avatar">J</div>
-                    <h3>Jana</h3>
+                    <h3 lang="hr">Jana</h3>
                     <p data-translate="testimonial1-text">"Apsolutno smo uživali jednu noć u ovom apartmanu. Sve je bilo čisto, lijepo, vlasnik vrlo koristan i prijateljski. Hvala vam na mogućnosti da se ovdje odmorimo nakon dugog putovanja. Sigurno ćemo se ponovno vratiti."</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-avatar">T</div>
-                    <h3>Tamara</h3>
+                    <h3 lang="hr">Tamara</h3>
                     <p data-translate="testimonial2-text">"Jako lijepo sređen apartman, super lokacija u blizini bazena, vrlo ljubazan vlasnik. Sve preporuke."</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-avatar">D</div>
-                    <h3>Darko</h3>
+                    <h3 lang="hr">Darko</h3>
                     <p data-translate="testimonial3-text">"Vrlo udoban i ugodan apartman sa svim što vam treba. Domaćin je bio izuzetno prijatan i koristan. Lokacija je odlična, samo minutu ili dvije od termalnog spa-a Aqua Vivae."</p>
                 </div>
             </div>
@@ -477,13 +546,13 @@
                             <h3>
                                 <i data-lucide="phone" class="contact-icon"></i> <span data-translate="contact-phone">Telefon</span>
                             </h3>
-                            <p>+385 98 998 2059</p>
+                            <p lang="hr">+385 98 998 2059</p>
                         </div>
                         <div class="contact-item">
                             <h3>
                                 <i data-lucide="mail" class="contact-icon"></i> <span data-translate="contact-email">Email</span>
                             </h3>
-                            <p>dragutin.safranko@gmail.com</p>
+                            <p lang="hr">dragutin.safranko@gmail.com</p>
                         </div>
                         <div class="contact-item">
                             <h3>
@@ -501,7 +570,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>Apartmani Dada</h3>
+                    <h3 lang="hr">Apartmani Dada</h3>
                     <p data-translate="footer-text">Experience the best of Krapinske Toplice with our premium apartment rentals. Your comfort is our priority.</p>
                 </div>
                 <div class="footer-links">
