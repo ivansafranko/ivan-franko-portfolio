@@ -510,7 +510,7 @@ body {
     border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
     transition: opacity 0.3s ease;
     opacity: 0;
-    background: #000; /* avoid white flash backdrop */
+    background: #fff; /* keep white backdrop as requested */
 }
 
 .apartment-gallery.gallery-enabled {
