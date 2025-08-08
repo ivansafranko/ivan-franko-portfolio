@@ -529,16 +529,13 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    transform: scale(0.99);
+    transform: scale(1);
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: opacity 250ms ease-in-out;
 }
 
 .gallery-image.active,
-.gallery-image:first-child {
-    transform: scale(1);
-    opacity: 1;
-}
+.gallery-image:first-child { opacity: 1; }
 
 .gallery-prev,
 .gallery-next {
@@ -1331,28 +1328,23 @@ input[type="date"][lang="en-GB"] {
     height: 1.25rem;
 }
 
-/* Mobile Sticky CTA */
-.mobile-sticky-cta { display: none; }
-
-.mobile-sticky-cta-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    background: linear-gradient(135deg, #FF8C00, #FF6B00);
-    font-weight: 700;
-    padding: 0.9rem 1rem;
-    border-radius: 0.9rem;
-    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+/* Mobile CTA below contact info */
+.mobile-book-cta { display: none; margin-top: 1rem; }
+.mobile-book-cta-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #FF8C00, #FF6B00);
+  font-weight: 700;
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
 }
-
-.mobile-sticky-cta-button:hover { opacity: 0.95; }
-
+.mobile-book-cta-button:hover { opacity: 0.95; }
 @media (max-width: 768px) {
-  .mobile-sticky-cta { display: block !important; }
-  /* lift back-to-top above sticky bar */
-  .back-to-top { bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
+  .mobile-book-cta { display: block; }
 }
 
 /* Responsive Design */

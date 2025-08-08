@@ -462,19 +462,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         function showImage(index) {
-            // Set all images to transparent and scaled down
-            images.forEach((img, i) => {
-                img.style.opacity = '0';
-                img.style.transform = 'scale(0.99)';
+            // Only toggle opacity to avoid white flash
+            images.forEach(img => {
                 img.classList.remove('active');
+                img.style.opacity = '0';
             });
-            
-            // Make target image visible and full scale
             const targetImage = images[index];
-            targetImage.style.opacity = '1';
-            targetImage.style.transform = 'scale(1)';
             targetImage.classList.add('active');
-            
+            targetImage.style.opacity = '1';
+
             // Update indicators
             indicators.forEach((indicator, i) => {
                 indicator.classList.toggle('active', i === index);
