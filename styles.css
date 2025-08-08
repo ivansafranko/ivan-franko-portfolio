@@ -1331,6 +1331,41 @@ input[type="date"][lang="en-GB"] {
     height: 1.25rem;
 }
 
+/* Mobile Sticky CTA */
+.mobile-sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 -6px 24px rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem calc(env(safe-area-inset-bottom) + 0.5rem);
+    z-index: 1001;
+}
+
+.mobile-sticky-cta-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #FF8C00, #FF6B00);
+    font-weight: 700;
+    padding: 0.9rem 1rem;
+    border-radius: 0.9rem;
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+}
+
+.mobile-sticky-cta-button:hover { opacity: 0.95; }
+
+@media (max-width: 768px) {
+  .mobile-sticky-cta { display: block; }
+  /* lift back-to-top above sticky bar */
+  .back-to-top { bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
