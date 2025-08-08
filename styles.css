@@ -510,6 +510,7 @@ body {
     border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
     transition: opacity 0.3s ease;
     opacity: 0;
+    background: #000; /* avoid white flash backdrop */
 }
 
 .apartment-gallery.gallery-enabled {
@@ -532,6 +533,7 @@ body {
     transform: scale(1);
     opacity: 0;
     transition: opacity 250ms ease-in-out;
+    will-change: opacity;
 }
 
 .gallery-image.active,
@@ -1338,13 +1340,14 @@ input[type="date"][lang="en-GB"] {
   text-decoration: none;
   background: linear-gradient(135deg, #FF8C00, #FF6B00);
   font-weight: 700;
-  padding: 0.9rem 1rem;
+  padding: 1rem 1.1rem;
   border-radius: 0.9rem;
   box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
 }
 .mobile-book-cta-button:hover { opacity: 0.95; }
 @media (max-width: 768px) {
   .mobile-book-cta { display: block; }
+  .mobile-book-cta-button { font-size: 1.05rem; }
 }
 
 /* Responsive Design */

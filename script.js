@@ -504,6 +504,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (img.complete && img.naturalWidth > 0) {
                     resolve();
                 } else {
+                    // Use decode() when available for smoother rendering
+                    if (typeof img.decode === 'function') {
+                        img.decode().then(resolve).catch(resolve);
+                    }
                     img.onload = resolve;
                     img.onerror = resolve;
                 }
@@ -512,8 +516,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         Promise.all(imagePromises).then(() => {
             // All images are decoded, now show gallery
-            gallery.classList.add('gallery-enabled');
+            // Pre-show first image hidden, then fade in to avoid flash
             showImage(0);
+            requestAnimationFrame(() => {
+                gallery.classList.add('gallery-enabled');
+            });
         });
     });
 
