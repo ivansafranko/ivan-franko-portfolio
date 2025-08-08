@@ -11,6 +11,7 @@ const translations = {
         'nav-home': 'Početna',
         'nav-about': 'O nama',
         'nav-apartments': 'Apartmani',
+        'nav-book': 'Rezervirajte online',
         'nav-contact': 'Kontakt',
         
         // Hero section
@@ -97,6 +98,8 @@ const translations = {
         'booking-btn': 'Rezerviraj na Booking.com',
         'booking-btn-short': 'Booking.com',
         'booking-rating': 'Booking.com',
+        // Book page
+        'book-intro': 'Odaberite datume i rezervirajte svoj boravak.',
         
         // Footer
         'footer-text': 'Doživite najbolje od Krapinskih Toplica uz naše apartmane.',
@@ -111,6 +114,7 @@ const translations = {
         'nav-home': 'Homepage',
         'nav-about': 'About',
         'nav-apartments': 'Apartments',
+        'nav-book': 'Book Now',
         'nav-contact': 'Contact',
         
         // Hero section
@@ -197,6 +201,8 @@ const translations = {
         'booking-btn': 'Book on Booking.com',
         'booking-btn-short': 'Booking.com',
         'booking-rating': 'Booking.com',
+        // Book page
+        'book-intro': 'Select your dates and book your stay.',
         
         // Footer
         'footer-text': 'Experience the best of Krapinske Toplice with our premium apartment rentals. Your comfort is our priority.',

@@ -115,6 +115,11 @@ body {
     font-size: 1.75rem; /* Explicit font-size to fix deprecation warning */
 }
 
+/* Make header logo links non-underlined and inherit color */
+.logo a { text-decoration: none; color: inherit; }
+.logo a:hover { text-decoration: none; color: inherit; }
+.nav-mobile-logo { text-decoration: none; }
+
 .navigation {
     display: flex;
     align-items: center;
@@ -151,6 +156,19 @@ body {
 .nav-link:hover {
     color: #FF8C00;
     background: rgba(255, 140, 0, 0.1);
+}
+
+.nav-book {
+    border: 2px solid var(--accent-orange);
+    color: var(--neutral-white);
+    padding: 0.45rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+}
+
+.nav-book:hover {
+    background: rgba(255, 140, 0, 0.15);
+    color: var(--accent-orange);
 }
 
 .nav-cta {
@@ -1249,11 +1267,14 @@ input[type="date"][lang="en-GB"] {
     color: var(--neutral-white);
     font-size: var(--font-lg);
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: color 0.2s ease;
+    align-items: center;
+    display: inline-flex;
+    padding: 0.25rem; /* prevent clipping */
 }
 
 .social-links a:hover {
-    transform: translateY(-2px);
+    color: var(--accent-orange);
 }
 
 .footer-bottom {
