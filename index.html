@@ -547,7 +547,7 @@
             <p class="section-subheadline">I’m available for freelance and full-time opportunities.</p>
             
             <div class="contact-content">
-                <form class="contact-form" netlify-honeypot="bot-field" data-netlify="true" method="POST" id="contactForm">
+                <form class="contact-form" name="contact-form" netlify netlify-honeypot="bot-field" method="POST" action="/success.html" id="contactForm">
                     <input type="hidden" name="form-name" value="contact-form">
                     <input type="hidden" name="bot-field">
                     <div class="form-group">
@@ -566,6 +566,12 @@
                         <textarea name="message" placeholder="Message" required></textarea>
                     </div>
                     <button type="submit" class="contact-submit">Send Message</button>
+                </form>
+                <!-- Netlify static fallback form to ensure detection at build time -->
+                <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+                    <input type="text" name="name">
+                    <input type="email" name="email">
+                    <textarea name="message"></textarea>
                 </form>
                 
                 <div id="form-success-message" class="form-success-message" style="display: none;">

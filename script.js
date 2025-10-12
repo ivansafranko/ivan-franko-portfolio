@@ -532,95 +532,69 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'all 0.3s ease';
     });
 
-    // Contact form handling with Netlify Forms
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-            
-            // Show loading state
-            const submitBtn = this.querySelector('.contact-submit');
-            const originalText = submitBtn.textContent;
-            const loadingText = currentLanguage === 'hr' ? 'Šalje se...' : 'Sending...';
-            
-            submitBtn.textContent = loadingText;
+// Contact form handling with Netlify Forms (AJAX submit to keep inline success)
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = this.querySelector('.contact-submit');
+        const originalText = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) {
+            submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            
-            // Simple form validation before submission
-            const inputs = this.querySelectorAll('input[required], textarea[required]');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.style.borderColor = '#FF6B6B';
-                } else {
-                    input.style.borderColor = '#E5E7EB';
-                }
-            });
-            
-            if (!isValid) {
-                const errorText = currentLanguage === 'hr' ? 
-                    'Molimo unesite sve obavezne podatke.' : 
-                    'Please fill in all required fields.';
-                alert(errorText);
-                
-                // Reset button
+        }
+
+        const inputs = this.querySelectorAll('input[required], textarea[required]');
+        let isValid = true;
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                isValid = false;
+                input.style.borderColor = '#FF6B6B';
+            } else {
+                input.style.borderColor = '#E5E7EB';
+            }
+        });
+        if (!isValid) {
+            if (submitBtn) {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-                return;
             }
-            
-            // Submit form data to Netlify
-            const formData = new FormData(this);
-            
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
-            })
-            .then(() => {
-                // Show success message
-                const successMessage = document.getElementById('form-success-message');
-                const contactFormElement = document.querySelector('.contact-form');
-                
-                // Hide form and show success message
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        const formData = new FormData(this);
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+            const successMessage = document.getElementById('form-success-message');
+            const contactFormElement = document.querySelector('.contact-form');
+            if (contactFormElement && successMessage) {
                 contactFormElement.style.display = 'none';
                 successMessage.style.display = 'block';
-                
-                // Update Lucide icons for the success message
-                lucide.createIcons();
-                
-                // Apply current language translations to success message
-                updateLanguage(currentLanguage);
-                
-                // Scroll to success message
+                if (typeof lucide !== 'undefined') {
+                    try { lucide.createIcons(); } catch (_) {}
+                }
                 successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Reset form for future use
-                contactFormElement.reset();
-                
-                // Show form again after 5 seconds
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                    contactFormElement.style.display = 'block';
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                }, 5000);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                const errorText = currentLanguage === 'hr' ? 
-                    'Greška pri slanju poruke. Molimo pokušajte ponovo.' : 
-                    'Error sending message. Please try again.';
-                alert(errorText);
-                
-                // Reset button
+            }
+            this.reset();
+            if (submitBtn) {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            });
+            }
+        })
+        .catch(() => {
+            if (submitBtn) {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+            alert('Error sending message. Please try again.');
         });
-    }
+    });
+}
 
     // Header scroll effect
     const header = document.querySelector('.header');
