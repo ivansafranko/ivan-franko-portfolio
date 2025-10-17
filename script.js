@@ -853,4 +853,146 @@ if (contactForm) {
         if (e.key === '-' || e.key === '_') applyZoom(zoomScale / 1.2);
         if (e.key.toLowerCase() === '0') applyZoom(1);
     });
+
+    // Hero text tilt animation
+    const heroHeadline = document.querySelector('.hero-headline');
+    const heroSubheadline = document.querySelector('.hero-subheadline');
+
+    if (heroHeadline && heroSubheadline) {
+        let mouseX = 0;
+        let mouseY = 0;
+        let isMouseOverHero = false;
+        let animationFrameId = null;
+
+        function updateTilt() {
+            if (!isMouseOverHero) return;
+
+            const heroRect = heroHeadline.getBoundingClientRect();
+            const centerX = heroRect.left + heroRect.width / 2;
+            const centerY = heroRect.top + heroRect.height / 2;
+
+            const mouseOffsetX = mouseX - centerX;
+            const mouseOffsetY = mouseY - centerY;
+
+            const tiltX = (mouseOffsetX / (heroRect.width / 2)) * 10; // Mild tilt (max 3deg)
+            const tiltY = (mouseOffsetY / (heroRect.height / 2)) * 10;
+
+            const transform = `perspective(1000px) rotateX(${tiltY * 0.5}deg) rotateY(${tiltX * 0.5}deg)`;
+            heroHeadline.style.transform = transform;
+            heroSubheadline.style.transform = transform;
+
+            animationFrameId = requestAnimationFrame(updateTilt);
+        }
+
+        function handleMouseMove(event) {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+            if (isMouseOverHero && !animationFrameId) {
+                updateTilt();
+            }
+        }
+
+        function handleMouseEnter() {
+            isMouseOverHero = true;
+            updateTilt();
+        }
+
+        function handleMouseLeave() {
+            isMouseOverHero = false;
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+            heroHeadline.style.transform = 'none';
+            heroSubheadline.style.transform = 'none';
+        }
+
+        document.addEventListener('mousemove', handleMouseMove, { passive: true });
+        heroHeadline.addEventListener('mouseenter', handleMouseEnter);
+        heroSubheadline.addEventListener('mouseenter', handleMouseEnter);
+        heroHeadline.addEventListener('mouseleave', handleMouseLeave);
+        heroSubheadline.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+    // Cursor-following blob animation
+    const canvas = document.getElementById('hero-rive-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        const heroSection = document.querySelector('.hero-section');
+        
+        // Set canvas size
+        function resizeCanvas() {
+            if (heroSection) {
+                canvas.width = heroSection.offsetWidth;
+                canvas.height = heroSection.offsetHeight;
+            }
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        const blobs = [];
+
+        class Blob {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.targetX = x;
+                this.targetY = y;
+                this.radius = Math.random() * 100 + 50;
+                this.vx = (Math.random() - 0.5) * 4;
+                this.vy = (Math.random() - 0.5) * 4;
+                this.color = ['rgba(255, 140, 0, 0.3)', 'rgba(255, 107, 0, 0.25)', 'rgba(58, 74, 92, 0.2)'][Math.floor(Math.random() * 3)];
+            }
+
+            update() {
+                this.x += (this.targetX - this.x) * 0.05;
+                this.y += (this.targetY - this.y) * 0.05;
+                this.targetX += this.vx;
+                this.targetY += this.vy;
+
+                if (this.targetX < 0 || this.targetX > canvas.width) this.vx *= -1;
+                if (this.targetY < 0 || this.targetY > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // Create initial blobs
+        for (let i = 0; i < 3; i++) {
+            blobs.push(new Blob(Math.random() * canvas.width, Math.random() * canvas.height));
+        }
+
+        // Track mouse for cursor following
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Move closest blob towards cursor
+            if (blobs.length > 0) {
+                blobs[0].targetX = mouseX;
+                blobs[0].targetY = mouseY;
+            }
+        }, { passive: true });
+
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            blobs.forEach(blob => {
+                blob.update();
+                blob.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    }
 }); 
