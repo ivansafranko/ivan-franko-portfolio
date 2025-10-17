@@ -943,7 +943,11 @@ if (contactForm) {
                 this.radius = Math.random() * 100 + 50;
                 this.vx = (Math.random() - 0.5) * 4;
                 this.vy = (Math.random() - 0.5) * 4;
-                this.color = ['rgba(255, 140, 0, 0.3)', 'rgba(255, 107, 0, 0.25)', 'rgba(58, 74, 92, 0.2)'][Math.floor(Math.random() * 3)];
+                this.color = 'rgba(58, 74, 92, 0.2)'; // Grey by default
+            }
+
+            setOrange() {
+                this.color = 'rgba(255, 140, 0, 0.3)'; // Orange for cursor-following blob
             }
 
             update() {
@@ -968,6 +972,10 @@ if (contactForm) {
         for (let i = 0; i < 3; i++) {
             blobs.push(new Blob(Math.random() * canvas.width, Math.random() * canvas.height));
         }
+
+        // Set first blob to orange (cursor-following)
+        blobs[0].setOrange();
+        blobs[0].radius = 110;
 
         // Track mouse for cursor following
         document.addEventListener('mousemove', (e) => {

@@ -31,4 +31,10 @@
 # Form handling - emails will be sent to the configured email
 # You'll need to configure this in Netlify admin panel:
 # Site Settings > Forms > Form notifications
-# Add espana.dsr@gmail.com as the notification email 
+# Add espana.dsr@gmail.com as the notification email
+
+# Headers to prevent caching of script.js
+[[headers]]
+  for = "/script.js*"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0" 
